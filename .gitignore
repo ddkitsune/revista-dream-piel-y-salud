@@ -1,0 +1,10 @@
+# Claves y configuraciones sensibles
+*mcp_config.json
+.agents/
+.vercel
+*.log
+.DS_Store
+Thumbs.db
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat

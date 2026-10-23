@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso Clínico: Láser CO2 + Exosomas | Social Dream Piel y Salud</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandSurface: '#f8fafd',
+                        brandSurfaceLow: '#ffffff',
+                        brandSurfaceTint: '#edf3f8',
+                        brandAccent: '#1e4b75',
+                        brandAccentLight: '#356d9c',
+                        brandAccentHover: '#143553',
+                        brandDark: '#111c2a',
+                        textMuted: '#586c82',
+                        brandBorder: '#dbe5ee',
+                        statusSuccess: '#1f8a65'
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Bodoni Moda"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-brandSurface text-brandDark font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- CABECERA INSTITUCIONAL CON LOGO BLUE ECLIPSE -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-md z-40 border-b border-brandBorder shadow-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="social.html" class="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-textMuted hover:text-brandAccent transition font-semibold">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    Social Dream Feed
+                </a>
+                <span class="text-neutral-300">|</span>
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <span class="font-sans font-bold text-2xl tracking-tight text-brandDark lowercase">dream</span>
+                    <div class="w-6 h-6 rounded-full border-[3px] border-transparent border-r-[#1e4b75] border-t-[#356d9c] border-b-[#111c2a] rotate-[25deg]"></div>
+                </a>
+            </div>
+
+            <!-- Navegación Unificada (3 Accesos Clave) -->
+            <nav class="hidden lg:flex items-center gap-8 text-xs uppercase tracking-widest font-semibold text-textMuted">
+                <a href="index.html" class="hover:text-brandDark transition">Revista</a>
+                <a href="especialistas.html" class="hover:text-brandDark transition">Directorio Médico</a>
+                <a href="social.html" class="hover:text-brandDark transition">Social Dream</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="login.html" class="px-4 py-2 bg-brandAccent hover:bg-brandAccentHover text-white rounded-xl text-xs font-bold uppercase tracking-wider transition">
+                    Mi Cuenta
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CUERPO PRINCIPAL DEL POST Y DEBATE CLÍNICO -->
+    <main class="flex-1 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- COLUMNA PRINCIPAL DE LA PUBLICACIÓN (8/12) -->
+            <div class="lg:col-span-8 space-y-6">
+                
+                <!-- TARJETA DEL CASO CLÍNICO EXPUESTO -->
+                <article class="bg-white p-6 sm:p-8 rounded-3xl border border-brandBorder shadow-sm">
+                    
+                    <!-- Header del Autor Médico -->
+                    <div class="flex items-center justify-between mb-6 pb-4 border-b border-brandBorder">
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Dr. Marcos Rivera" class="w-12 h-12 rounded-full object-cover border-2 border-brandAccent/30">
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <h3 class="font-bold text-sm text-brandDark">Dr. Marcos Rivera</h3>
+                                    <span class="text-[10px] bg-[#ebf7f2] text-statusSuccess px-2 py-0.5 rounded font-mono font-bold">Col. #30.412-M</span>
+                                </div>
+                                <p class="text-xs text-textMuted font-light">Cirujano Plástico Facial • Instituto Médico Quirúrgico Dream</p>
+                            </div>
+                        </div>
+                        <span class="text-[11px] font-mono text-textMuted">Publicado hoy, 09:30</span>
+                    </div>
+
+                    <h1 class="font-serif text-2xl sm:text-3xl text-brandDark font-medium leading-snug mb-4">
+                        Protocolo Combinado: Láser CO2 Fraccionado UltraPlus + Exosomas Autólogos en Cicatrices Atróficas de Acné
+                    </h1>
+
+                    <p class="text-xs sm:text-sm text-neutral-700 font-light leading-relaxed mb-6">
+                        Presentamos la evolución a las 8 semanas de una paciente de 29 años con cicatrices en furgón (boxcar) y picahielo severas. Tras la ablación fraccionada con energía de 60 mJ y densidad del 15%, realizamos la impregnación transdérmica de 5 billones de vesículas extracelulares liofilizadas. La epitelización completa se alcanzó en sólo 4.5 días frente a los 9 días del protocolo tradicional.
+                    </p>
+
+                    <!-- FOTOGRAFÍA COMPARATIVA CLÍNICA -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                        <div class="rounded-2xl overflow-hidden border border-brandBorder bg-neutral-100 relative">
+                            <img src="https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full aspect-[4/3] object-cover">
+                            <span class="absolute bottom-2 left-2 bg-black/70 text-white text-[10px] font-mono px-2 py-0.5 rounded font-bold">Pre-Tratamiento (Día 0)</span>
+                        </div>
+                        <div class="rounded-2xl overflow-hidden border border-brandBorder bg-neutral-100 relative">
+                            <img src="https://images.pexels.com/photos/3762871/pexels-photo-3762871.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full aspect-[4/3] object-cover">
+                            <span class="absolute bottom-2 left-2 bg-[#1e4b75]/90 text-white text-[10px] font-mono px-2 py-0.5 rounded font-bold">Post-Tratamiento (Semana 8)</span>
+                        </div>
+                    </div>
+
+                    <!-- BARRA DE ACCIONES Y DEBATE -->
+                    <div class="flex items-center justify-between pt-4 border-t border-brandBorder text-xs text-textMuted font-semibold">
+                        <div class="flex items-center gap-6">
+                            <button onclick="showNotification('Has validado este caso clínico')" class="flex items-center gap-1.5 hover:text-brandAccent transition">
+                                <svg class="w-5 h-5 text-brandAccent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/></svg>
+                                <span>84 Avales Médicos</span>
+                            </button>
+                            <span class="flex items-center gap-1.5">
+                                <svg class="w-5 h-5 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                                <span>16 Comentarios Colegiados</span>
+                            </span>
+                        </div>
+                        <button onclick="showNotification('Enlace al caso clínico copiado')" class="hover:text-brandDark transition">
+                            Compartir
+                        </button>
+                    </div>
+
+                </article>
+
+                <!-- HILO DE COMENTARIOS Y DEBATE ENTRE ESPECIALISTAS -->
+                <section class="bg-white p-6 sm:p-8 rounded-3xl border border-brandBorder shadow-sm space-y-6">
+                    <h3 class="font-serif text-xl font-medium text-brandDark border-b border-brandBorder pb-4">
+                        Debate Clínico y Dudas Sanitarias (16)
+                    </h3>
+
+                    <!-- Comentario de Doctora Colegiada 1 -->
+                    <div class="flex items-start gap-4">
+                        <img src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=150" class="w-10 h-10 rounded-full object-cover shrink-0">
+                        <div class="flex-1 bg-brandSurface p-4 rounded-2xl border border-brandBorder text-xs space-y-1.5">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <strong class="text-brandDark">Dra. Marcela Cadavid</strong>
+                                    <span class="text-[9px] bg-brandAccent text-white px-2 py-0.5 rounded font-mono font-bold">Comité Asesor</span>
+                                </div>
+                                <span class="text-[10px] text-textMuted font-mono">Hace 2 horas</span>
+                            </div>
+                            <p class="text-neutral-700 leading-relaxed font-light">
+                                Excelente caso, Marcos. ¿Utilizaste algún fotoprotector mineral específico durante las primeras 72 horas para prevenir hiperpigmentación postinflamatoria (HPI), considerando el fototipo de la paciente?
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Respuesta del Autor -->
+                    <div class="flex items-start gap-4 ml-6 sm:ml-10">
+                        <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=150" class="w-9 h-9 rounded-full object-cover shrink-0">
+                        <div class="flex-1 bg-brandSurfaceTint p-4 rounded-2xl border border-brandBorder text-xs space-y-1.5">
+                            <div class="flex items-center justify-between">
+                                <strong class="text-brandDark">Dr. Marcos Rivera (Autor)</strong>
+                                <span class="text-[10px] text-textMuted font-mono">Hace 1 hora</span>
+                            </div>
+                            <p class="text-neutral-700 leading-relaxed font-light">
+                                Gracias, Marcela. Prescribimos fotoprotector 100% mineral en base fluida de óxido de zinc micronizado a partir del día 3, junto con crema barrera rica en ceramidas y centella asiática cada 8 horas. Cero casos de HPI.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Input para Comentar -->
+                    <form onsubmit="event.preventDefault(); showNotification('Comentario enviado a moderación médica.');" class="pt-4 border-t border-brandBorder flex gap-2">
+                        <input type="text" placeholder="Escribe tu observación clínica o pregunta al Dr. Rivera..." class="flex-1 px-4 py-2.5 bg-brandSurface border border-brandBorder rounded-xl text-xs outline-none focus:border-brandAccent">
+                        <button type="submit" class="px-5 py-2.5 bg-brandAccent hover:bg-brandAccentHover text-white rounded-xl text-xs font-bold uppercase tracking-wider transition">
+                            Publicar
+                        </button>
+                    </form>
+                </section>
+
+            </div>
+
+            <!-- COLUMNA LATERAL: FICHA DEL DOCTOR Y ACCIONES (4/12) -->
+            <aside class="lg:col-span-4 space-y-6">
+                
+                <!-- TARJETA DEL ESPECIALISTA AUTOR -->
+                <div class="bg-white p-6 rounded-3xl border border-brandBorder shadow-sm text-center">
+                    <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=300" class="w-24 h-24 rounded-full object-cover mx-auto mb-3 border-2 border-brandAccent/30">
+                    <h4 class="font-serif text-lg font-medium text-brandDark">Dr. Marcos Rivera</h4>
+                    <p class="text-xs text-brandAccent font-semibold">Cirugía Facial & Tecnologías Láser</p>
+                    <p class="text-xs text-textMuted font-light mt-2 mb-6">
+                        Miembro de la Sociedad Española de Cirugía Plástica Facial. 14 años de experiencia en regeneración dérmica.
+                    </p>
+
+                    <div class="space-y-2.5">
+                        <a href="perfil-especialista.html" class="block w-full py-3 bg-brandAccent hover:bg-brandAccentHover text-white rounded-xl text-xs font-bold uppercase tracking-wider transition shadow-sm">
+                            Agendar Cita con Dr. Rivera
+                        </a>
+                        <a href="chat-medico.html" class="block w-full py-2.5 bg-brandSurfaceTint hover:bg-brandBorder text-brandDark rounded-xl text-xs font-semibold tracking-wider transition border border-brandBorder">
+                            Enviar Consulta Online Privada
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CASOS RELACIONADOS -->
+                <div class="bg-white p-6 rounded-3xl border border-brandBorder shadow-sm">
+                    <h4 class="font-serif text-base font-medium text-brandDark mb-4">Otros Casos de Discusión</h4>
+                    <div class="space-y-4 text-xs">
+                        <a href="caso-clinico.html" class="block group">
+                            <span class="text-[10px] font-mono text-brandAccent font-bold uppercase">Medicina Regenerativa</span>
+                            <h5 class="font-semibold text-brandDark group-hover:text-brandAccent transition mt-0.5">Polinucleótidos PDRN en la zona periocular</h5>
+                            <p class="text-[11px] text-textMuted font-light">Evolución fotográfica a los 60 días.</p>
+                        </a>
+                        <hr class="border-brandBorder">
+                        <a href="articulo-detalle.html" class="block group">
+                            <span class="text-[10px] font-mono text-brandAccent font-bold uppercase">Artículo Clínico</span>
+                            <h5 class="font-semibold text-brandDark group-hover:text-brandAccent transition mt-0.5">Bioestimulación con exosomas liofilizados</h5>
+                            <p class="text-[11px] text-textMuted font-light">Por la Dra. Elena Valdés.</p>
+                        </a>
+                    </div>
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER INSTITUCIONAL -->
+    <footer class="bg-brandDark text-white py-10 border-t border-white/10 text-center text-xs text-neutral-400 mt-16">
+        <p>© 2026 DREAM Piel & Salud. Foro clínico colegiado sujeto al código deontológico de la OMC.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

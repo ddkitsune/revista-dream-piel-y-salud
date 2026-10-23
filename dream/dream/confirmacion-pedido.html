@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Pedido & Trazabilidad Térmica | Dream Marketplace</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandSurface: '#f8fafd',
+                        brandSurfaceLow: '#ffffff',
+                        brandSurfaceTint: '#edf3f8',
+                        brandAccent: '#1e4b75',
+                        brandAccentLight: '#356d9c',
+                        brandAccentHover: '#143553',
+                        brandDark: '#111c2a',
+                        textMuted: '#586c82',
+                        brandBorder: '#dbe5ee',
+                        statusSuccess: '#1f8a65'
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Bodoni Moda"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-brandSurface text-brandDark font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- CABECERA INSTITUCIONAL CON LOGO BLUE ECLIPSE -->
+    <header class="bg-white border-b border-brandBorder py-3.5 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <span class="font-sans font-bold text-2xl tracking-tight text-brandDark lowercase">dream</span>
+                <div class="w-6 h-6 rounded-full border-[3px] border-transparent border-r-[#1e4b75] border-t-[#356d9c] border-b-[#111c2a] rotate-[25deg]"></div>
+                <span class="font-serif text-sm text-textMuted ml-1">Marketplace Farmacéutico</span>
+            </a>
+            <div class="flex items-center gap-2 text-xs font-semibold text-statusSuccess bg-[#ebf7f2] px-3 py-1 rounded-full">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                <span>Pedido Confirmado y Pagado</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- CUERPO PRINCIPAL -->
+    <main class="flex-1 max-w-5xl mx-auto px-4 sm:px-6 py-10 w-full">
+        
+        <!-- CARD DE ÉXITO PRINCIPAL -->
+        <div class="bg-white p-8 sm:p-10 rounded-3xl border border-brandBorder shadow-sm mb-10 text-center">
+            <div class="w-16 h-16 rounded-full bg-[#ebf7f2] text-statusSuccess mx-auto flex items-center justify-center mb-4">
+                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span class="text-xs font-mono uppercase tracking-widest text-textMuted">Localizador Oficial</span>
+            <h1 class="font-serif text-3xl sm:text-4xl font-normal text-brandDark mt-1 mb-2">
+                ¡Gracias por su compra, Carla!
+            </h1>
+            <p class="text-xs sm:text-sm text-textMuted max-w-xl mx-auto leading-relaxed mb-6 font-light">
+                Su pedido <strong class="font-mono text-brandDark">#DR-2026-881</strong> ha sido despachado desde nuestro centro logístico farmacéutico climatizado.
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center gap-3">
+                <button onclick="window.print()" class="px-5 py-2.5 bg-brandSurfaceTint hover:bg-brandBorder text-brandDark rounded-xl text-xs font-semibold tracking-wider transition border border-brandBorder flex items-center gap-2">
+                    <svg class="w-4 h-4 text-brandAccent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+                    Descargar Factura con NIF
+                </button>
+                <a href="expediente-paciente.html" class="px-5 py-2.5 bg-brandAccent hover:bg-brandAccentHover text-white rounded-xl text-xs font-bold uppercase tracking-wider transition shadow-sm">
+                    Ver en Mi Expediente
+                </a>
+            </div>
+        </div>
+
+        <!-- MONITOR DE CADENA DE FRÍO MÉDICA EN TIEMPO REAL (SENSOR DIGITAL 2°C - 8°C) -->
+        <div class="bg-gradient-to-br from-[#111c2a] via-[#1a324d] to-[#1e4b75] text-white p-6 sm:p-8 rounded-3xl shadow-xl mb-10 border border-white/10">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-6 mb-6">
+                <div>
+                    <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#93bbeb] mb-1">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                        Sensor Térmico IoT Activo #SENS-884
+                    </div>
+                    <h2 class="font-serif text-2xl font-normal">Trazabilidad de Cadena de Frío Médica Garantizada</h2>
+                </div>
+                <div class="flex items-baseline gap-2 bg-black/40 px-5 py-2.5 rounded-2xl border border-white/10">
+                    <span class="text-xs text-neutral-300">Temperatura Actual:</span>
+                    <span class="font-mono text-2xl font-bold text-emerald-400">4.2 °C</span>
+                    <span class="text-[10px] text-neutral-400">(Óptimo 2-8°C)</span>
+                </div>
+            </div>
+
+            <!-- TIMELINE DE TRANSPORTE Y ENTREGA -->
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-xs">
+                <div class="p-4 bg-white/5 rounded-xl border border-white/10">
+                    <span class="text-[10px] text-emerald-400 font-mono font-bold">14:10 CEST</span>
+                    <h4 class="font-semibold text-white mt-1">Salida de Laboratorio</h4>
+                    <p class="text-[11px] text-neutral-300 font-light">Embalaje isotérmico sellado con control digital.</p>
+                </div>
+                <div class="p-4 bg-white/5 rounded-xl border border-white/10">
+                    <span class="text-[10px] text-emerald-400 font-mono font-bold">14:35 CEST</span>
+                    <h4 class="font-semibold text-white mt-1">Furgoneta Climatizada</h4>
+                    <p class="text-[11px] text-neutral-300 font-light">En tránsito refrigerado por Madrid Centro.</p>
+                </div>
+                <div class="p-4 bg-white/10 rounded-xl border-2 border-emerald-400/60 shadow-lg">
+                    <span class="text-[10px] text-emerald-400 font-mono font-bold">EN CURSO</span>
+                    <h4 class="font-semibold text-white mt-1">Reparto Prioritario</h4>
+                    <p class="text-[11px] text-neutral-200 font-light">Llegada estimada en <strong>28 minutos</strong>.</p>
+                </div>
+                <div class="p-4 bg-white/5 rounded-xl border border-white/10 opacity-60">
+                    <span class="text-[10px] text-neutral-400 font-mono">15:15 CEST (Est.)</span>
+                    <h4 class="font-semibold text-white mt-1">Entrega Final</h4>
+                    <p class="text-[11px] text-neutral-400 font-light">Recepción bajo firma y lectura del sensor.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESUMEN DE PRODUCTOS ENTREGADOS -->
+        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-brandBorder shadow-xs">
+            <h3 class="font-serif text-lg font-medium text-brandDark mb-4">Artículos Incluidos en el Paquete Climatizado</h3>
+            <div class="divide-y divide-brandBorder text-xs">
+                <div class="py-3.5 flex items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <img src="https://images.pexels.com/photos/3685538/pexels-photo-3685538.jpeg?auto=compress&cs=tinysrgb&w=150" class="w-12 h-12 rounded-lg object-cover border border-brandBorder">
+                        <div>
+                            <h4 class="font-bold text-brandDark">Sérum Liposomal de Ácido Ferúlico 15% + Pantenol (30ml)</h4>
+                            <p class="text-textMuted text-[11px]">DERMALAB BIOTECH • Lote #DL-884</p>
+                        </div>
+                    </div>
+                    <span class="font-bold text-brandDark">68,00 €</span>
+                </div>
+                <div class="py-3.5 flex items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <img src="https://images.pexels.com/photos/4005041/pexels-photo-4005041.jpeg?auto=compress&cs=tinysrgb&w=150" class="w-12 h-12 rounded-lg object-cover border border-brandBorder">
+                        <div>
+                            <h4 class="font-bold text-brandDark">Fotoprotector Mineral Fluido SPF 50+ (50ml)</h4>
+                            <p class="text-textMuted text-[11px]">FOTOFINDER PROTECT • Cantidad: 2</p>
+                        </div>
+                    </div>
+                    <span class="font-bold text-brandDark">84,00 €</span>
+                </div>
+            </div>
+
+            <div class="border-t border-brandBorder pt-4 mt-2 flex justify-between items-center text-sm">
+                <span class="text-textMuted font-medium">Total abonado con envío isotérmico:</span>
+                <span class="font-serif font-bold text-lg text-brandAccent">156,90 €</span>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brandDark text-white py-8 border-t border-white/10 text-center text-xs text-neutral-400 mt-16">
+        <p>© 2026 DREAM Piel & Salud. Logística farmacéutica sujeta a inspección sanitaria y control de temperatura en tiempo real.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

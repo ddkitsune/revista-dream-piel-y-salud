@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Pedido Seguro | Dream Marketplace</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        alabaster: '#fcf9f8',
+                        warmcard: '#f7f3f2',
+                        editorialTerracotta: '#b86553',
+                        editorialDark: '#141313',
+                        medicalGreen: '#2d7a5b',
+                        warmBorder: '#ede7e5'
+                    },
+                    fontFamily: {
+                        serif: ['"Bodoni Moda"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-alabaster text-editorialDark font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- ENCABEZADO MINIMALISTA DE CHECKOUT SEGURO -->
+    <header class="bg-white border-b border-warmBorder py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <a href="index.html" class="font-serif text-2xl font-bold tracking-tight">
+                DREAM <span class="italic font-normal text-xs text-neutral-500 font-sans">Checkout Seguro</span>
+            </a>
+            <div class="flex items-center gap-2 text-xs text-medicalGreen font-semibold">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                <span>Cifrado Bancario SSL 256-Bit</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- CUERPO PRINCIPAL DEL CHECKOUT EN 2 COLUMNAS -->
+    <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 w-full">
+        
+        <!-- INDICADOR DE PASOS -->
+        <div class="flex items-center justify-center gap-3 sm:gap-8 mb-10 text-xs uppercase tracking-wider font-semibold">
+            <div class="flex items-center gap-2 text-editorialTerracotta">
+                <span class="w-6 h-6 rounded-full bg-editorialTerracotta text-white flex items-center justify-center text-[11px] font-bold">1</span>
+                <span>Envío & Datos</span>
+            </div>
+            <span class="w-8 sm:w-16 h-px bg-warmBorder"></span>
+            <div class="flex items-center gap-2 text-neutral-400">
+                <span class="w-6 h-6 rounded-full bg-warmcard text-neutral-500 flex items-center justify-center text-[11px] font-bold border border-warmBorder">2</span>
+                <span>Trazabilidad</span>
+            </div>
+            <span class="w-8 sm:w-16 h-px bg-warmBorder"></span>
+            <div class="flex items-center gap-2 text-neutral-400">
+                <span class="w-6 h-6 rounded-full bg-warmcard text-neutral-500 flex items-center justify-center text-[11px] font-bold border border-warmBorder">3</span>
+                <span>Pago</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            
+            <!-- FORMULARIO DE CHECKOUT (COLUMNA IZQUIERDA 7/12) -->
+            <div class="lg:col-span-7 space-y-8">
+                
+                <!-- SECCION 1: DIRECCION DE ENTREGA -->
+                <section class="bg-white p-6 sm:p-8 rounded-2xl border border-warmBorder shadow-sm">
+                    <h2 class="font-serif text-xl font-medium text-editorialDark mb-6 flex items-center justify-between">
+                        <span>1. Dirección de Entrega</span>
+                        <span class="text-xs font-sans text-neutral-400 font-normal">Paso obligatorio</span>
+                    </h2>
+
+                    <div class="space-y-4 text-xs">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block font-medium text-neutral-700 mb-1">Nombre</label>
+                                <input type="text" value="Carla" class="w-full px-3.5 py-2.5 rounded-lg border border-warmBorder focus:border-editorialTerracotta focus:ring-1 focus:ring-editorialTerracotta outline-none">
+                            </div>
+                            <div>
+                                <label class="block font-medium text-neutral-700 mb-1">Apellidos</label>
+                                <input type="text" value="Gómez Morales" class="w-full px-3.5 py-2.5 rounded-lg border border-warmBorder focus:border-editorialTerracotta outline-none">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block font-medium text-neutral-700 mb-1">Correo Electrónico</label>
+                            <input type="email" value="carla.gomez@clinica.es" class="w-full px-3.5 py-2.5 rounded-lg border border-warmBorder focus:border-editorialTerracotta outline-none">
+                        </div>
+
+                        <div>
+                            <label class="block font-medium text-neutral-700 mb-1">Dirección Completa (Calle, número, piso/puerta)</label>
+                            <input type="text" value="Calle Serrano 45, 3º Izquierda" class="w-full px-3.5 py-2.5 rounded-lg border border-warmBorder focus:border-editorialTerracotta outline-none">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div>
+                                <label class="block font-medium text-neutral-700 mb-1">Código Postal</label>
+                                <input type="text" value="28001" class="w-full px-3.5 py-2.5 rounded-lg border border-warmBorder focus:border-editorialTerracotta outline-none">
+                            </div>
+                            <div>
+                                <label class="block font-medium text-neutral-700 mb-1">Ciudad</label>
+                                <input type="text" value="Madrid" class="w-full px-3.5 py-2.5 rounded-lg border border-warmBorder focus:border-editorialTerracotta outline-none">
+                            </div>
+                            <div>
+                                <label class="block font-medium text-neutral-700 mb-1">Teléfono</label>
+                                <input type="tel" value="+34 611 234 567" class="w-full px-3.5 py-2.5 rounded-lg border border-warmBorder focus:border-editorialTerracotta outline-none">
+                            </div>
+                        </div>
+
+                        <!-- OPCION FACTURA PROFESIONAL -->
+                        <div class="pt-4 border-t border-warmBorder">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" id="nif-check" class="rounded text-editorialTerracotta focus:ring-editorialTerracotta" onchange="document.getElementById('nif-fields').classList.toggle('hidden')">
+                                <span class="font-medium text-editorialDark">Deseo factura con NIF/CIF profesional o clínica</span>
+                            </label>
+                            <div id="nif-fields" class="mt-3 grid grid-cols-2 gap-4 hidden">
+                                <input type="text" placeholder="Razón Social / Clínica" class="w-full px-3.5 py-2 rounded-lg border border-warmBorder">
+                                <input type="text" placeholder="NIF / CIF" class="w-full px-3.5 py-2 rounded-lg border border-warmBorder">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCION 2: TIPO DE ENVIO Y TRAZABILIDAD TERMICA -->
+                <section class="bg-white p-6 sm:p-8 rounded-2xl border border-warmBorder shadow-sm">
+                    <h2 class="font-serif text-xl font-medium text-editorialDark mb-4">
+                        2. Modalidad de Envío y Conservación
+                    </h2>
+
+                    <div class="space-y-3 text-xs">
+                        <!-- Opcion 1: Estandar -->
+                        <label class="flex items-start gap-3 p-4 rounded-xl border border-warmBorder hover:border-editorialTerracotta cursor-pointer transition">
+                            <input type="radio" name="shipping" checked class="mt-1 text-editorialTerracotta focus:ring-editorialTerracotta">
+                            <div class="flex-1">
+                                <div class="flex justify-between font-bold text-editorialDark">
+                                    <span>Envío Exprés Estándar (24-48h)</span>
+                                    <span>4,90 €</span>
+                                </div>
+                                <p class="text-neutral-500 font-light mt-0.5">Embalaje isotérmico reciclable protegido contra impactos.</p>
+                            </div>
+                        </label>
+
+                        <!-- Opcion 2: Cadena de Frio / Termica Medica -->
+                        <label class="flex items-start gap-3 p-4 rounded-xl border-2 border-editorialTerracotta bg-[#fcf8f7] cursor-pointer transition">
+                            <input type="radio" name="shipping" class="mt-1 text-editorialTerracotta focus:ring-editorialTerracotta">
+                            <div class="flex-1">
+                                <div class="flex justify-between font-bold text-editorialDark">
+                                    <span class="flex items-center gap-1.5">
+                                        Cadena de Frío Garantizada (2°C - 8°C)
+                                        <span class="text-[9px] bg-medicalGreen text-white px-1.5 py-0.5 rounded uppercase">Recomendado Cosmecéutica</span>
+                                    </span>
+                                    <span>9,90 €</span>
+                                </div>
+                                <p class="text-neutral-600 font-light mt-0.5">Nevera biológica con sensor digital de temperatura certificada y registro en tiempo real.</p>
+                            </div>
+                        </label>
+                    </div>
+                </section>
+
+                <!-- SECCION 3: METODO DE PAGO -->
+                <section class="bg-white p-6 sm:p-8 rounded-2xl border border-warmBorder shadow-sm">
+                    <h2 class="font-serif text-xl font-medium text-editorialDark mb-4">
+                        3. Método de Pago Seguro
+                    </h2>
+
+                    <div class="space-y-3 text-xs">
+                        <label class="flex items-center justify-between p-4 rounded-xl border-2 border-editorialTerracotta bg-white cursor-pointer">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="payment" checked class="text-editorialTerracotta">
+                                <span class="font-bold text-editorialDark">Tarjeta de Crédito o Débito (Stripe / Visa / Mastercard)</span>
+                            </div>
+                            <span class="text-neutral-400 font-mono text-[11px]">•••• 4242</span>
+                        </label>
+
+                        <div class="p-4 bg-warmcard rounded-xl space-y-3">
+                            <input type="text" placeholder="Número de Tarjeta" value="4532 •••• •••• 8821" class="w-full px-3.5 py-2.5 rounded-lg border border-warmBorder bg-white font-mono">
+                            <div class="grid grid-cols-2 gap-3">
+                                <input type="text" placeholder="MM/AA" value="12/28" class="px-3.5 py-2.5 rounded-lg border border-warmBorder bg-white font-mono">
+                                <input type="text" placeholder="CVC" value="382" class="px-3.5 py-2.5 rounded-lg border border-warmBorder bg-white font-mono">
+                            </div>
+                        </div>
+
+                        <label class="flex items-center gap-3 p-4 rounded-xl border border-warmBorder hover:border-editorialTerracotta cursor-pointer">
+                            <input type="radio" name="payment" class="text-editorialTerracotta">
+                            <span class="font-medium text-editorialDark">Apple Pay / Google Pay (1 Clic)</span>
+                        </label>
+                        
+                        <label class="flex items-center gap-3 p-4 rounded-xl border border-warmBorder hover:border-editorialTerracotta cursor-pointer">
+                            <input type="radio" name="payment" class="text-editorialTerracotta">
+                            <span class="font-medium text-editorialDark">Bizum Instantáneo</span>
+                        </label>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- RESUMEN DE LA ORDEN (COLUMNA DERECHA 5/12) -->
+            <div class="lg:col-span-5">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-warmBorder shadow-sm sticky top-24">
+                    <h3 class="font-serif text-xl font-medium text-editorialDark mb-4">Resumen del Pedido</h3>
+
+                    <!-- LISTA DE PRODUCTOS DEL CARRITO -->
+                    <div class="divide-y divide-warmBorder text-xs mb-6">
+                        <div class="py-3 flex items-center gap-3">
+                            <img src="https://images.pexels.com/photos/3685538/pexels-photo-3685538.jpeg?auto=compress&cs=tinysrgb&w=150" class="w-12 h-12 rounded-lg object-cover border border-warmBorder">
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-editorialDark leading-tight">Sérum Liposomal Ácido Ferúlico 15%</h4>
+                                <p class="text-neutral-400 text-[10px]">Cant: 1 • DERMALAB</p>
+                            </div>
+                            <span class="font-bold text-editorialDark">68,00 €</span>
+                        </div>
+                        <div class="py-3 flex items-center gap-3">
+                            <img src="https://images.pexels.com/photos/4005041/pexels-photo-4005041.jpeg?auto=compress&cs=tinysrgb&w=150" class="w-12 h-12 rounded-lg object-cover border border-warmBorder">
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-editorialDark leading-tight">Fotoprotector Mineral Fluido SPF 50+</h4>
+                                <p class="text-neutral-400 text-[10px]">Cant: 2 • FOTOFINDER</p>
+                            </div>
+                            <span class="font-bold text-editorialDark">84,00 €</span>
+                        </div>
+                    </div>
+
+                    <!-- MUESTRAS MÉDICAS DE REGALO -->
+                    <div class="p-3 bg-[#ebf5f0] rounded-xl border border-medicalGreen/20 mb-6 text-xs text-medicalGreen flex items-center gap-2">
+                        <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <span>Incluye muestra gratuita de <strong>Crema Ceramidada 5ml</strong> y edición impresa de la revista.</span>
+                    </div>
+
+                    <!-- SUBTOTALES -->
+                    <div class="space-y-2.5 text-xs border-t border-warmBorder pt-4 mb-6 text-neutral-600">
+                        <div class="flex justify-between">
+                            <span>Subtotal Productos</span>
+                            <span class="font-medium text-editorialDark">152,00 €</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Envío Isotérmico Certificado</span>
+                            <span class="font-medium text-editorialDark">4,90 €</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>IVA (21% desglosado)</span>
+                            <span class="font-medium text-editorialDark">27,23 €</span>
+                        </div>
+                        <div class="flex justify-between text-base font-serif font-bold text-editorialDark border-t border-warmBorder pt-3">
+                            <span>Total a Pagar</span>
+                            <span class="text-editorialTerracotta">156,90 €</span>
+                        </div>
+                    </div>
+
+                    <!-- BOTON FINALIZAR COMPRA -->
+                    <button onclick="confirmOrder()" class="w-full py-4 bg-editorialTerracotta hover:bg-[#a35544] text-white rounded-xl text-xs font-bold uppercase tracking-widest shadow-md hover:shadow-lg transition flex items-center justify-center gap-2">
+                        <span>Pagar y Confirmar Pedido</span>
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </button>
+
+                    <p class="text-[10px] text-neutral-400 text-center mt-3 font-light">
+                        Garantía de devolución médica y seguimiento de temperatura en vivo tras el despacho.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-warmBorder py-6 text-center text-xs text-neutral-500">
+        <p>© 2026 DREAM Piel & Salud S.L. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JS de la aplicación -->
+    <script src="app.js"></script>
+    <script>
+        function confirmOrder() {
+            // Vaciar carrito
+            localStorage.setItem('dream_cart', '[]');
+            showNotification('¡Pedido confirmado con éxito! En breve recibirás el seguimiento por email.');
+            setTimeout(() => {
+                window.location.href = 'expediente-paciente.html';
+            }, 1800);
+        }
+    </script>
+</body>
+</html>

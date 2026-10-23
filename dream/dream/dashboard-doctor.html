@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Profesional Médico Colegiado | Dream Piel y Salud</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        alabaster: '#fcf9f8',
+                        warmcard: '#f7f3f2',
+                        editorialTerracotta: '#b86553',
+                        editorialDark: '#141313',
+                        medicalGreen: '#2d7a5b',
+                        warmBorder: '#ede7e5'
+                    },
+                    fontFamily: {
+                        serif: ['"Bodoni Moda"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-alabaster text-editorialDark font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- BARRA SUPERIOR MEDICA -->
+    <header class="sticky top-0 bg-white z-40 border-b border-warmBorder shadow-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="font-serif text-xl sm:text-2xl font-bold tracking-tight">
+                    DREAM <span class="italic font-normal text-xs text-neutral-500 font-sans">Portal Médico</span>
+                </a>
+                <span class="text-[10px] bg-medicalGreen text-white px-2 py-0.5 rounded font-bold uppercase tracking-wider hidden sm:inline">
+                    Colegiado Activo
+                </span>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="chat-medico.html" class="relative p-2 text-neutral-600 hover:text-editorialTerracotta transition">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                    <span class="absolute top-1 right-1 w-2.5 h-2.5 rounded-full bg-editorialTerracotta"></span>
+                </a>
+                <div class="flex items-center gap-3 border-l border-warmBorder pl-4">
+                    <img src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Dra. Cadavid" class="w-9 h-9 rounded-full object-cover border border-warmBorder">
+                    <div class="hidden sm:block text-left text-xs">
+                        <div class="font-bold text-editorialDark">Dra. Marcela Cadavid</div>
+                        <div class="text-[10px] text-neutral-400 font-mono">Col. #28.910-M</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CUERPO PRINCIPAL DEL PANEL MEDICO -->
+    <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        
+        <!-- BIENVENIDA Y ACCIONES RAPIDAS -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+            <div>
+                <h1 class="font-serif text-2xl sm:text-3xl font-medium text-editorialDark">Panel de Control Clínico</h1>
+                <p class="text-xs text-neutral-500 font-light mt-1">Gestión de consultas telemáticas, prescripciones oficiales y agenda quirúrgica.</p>
+            </div>
+            <div class="flex gap-3">
+                <button onclick="showNotification('Abriendo emisor de Receta Electrónica Colegiada...')" class="px-4 py-2.5 bg-editorialTerracotta hover:bg-[#a35544] text-white rounded-xl text-xs font-bold uppercase tracking-wider transition shadow-sm flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                    Emitir Nueva Receta
+                </button>
+                <a href="social.html" class="px-4 py-2.5 bg-white hover:bg-neutral-50 text-editorialDark border border-warmBorder rounded-xl text-xs font-semibold tracking-wider transition">
+                    Publicar en Social Dream
+                </a>
+            </div>
+        </div>
+
+        <!-- METRICAS CLINICAS DEL MES -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+            <div class="bg-white p-5 rounded-2xl border border-warmBorder shadow-xs">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400">Pacientes Atendidos</span>
+                <div class="font-serif text-3xl font-bold text-editorialDark mt-1">142</div>
+                <span class="text-[10px] text-medicalGreen font-medium">+18% vs mes anterior</span>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-warmBorder shadow-xs">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400">Consultas Online</span>
+                <div class="font-serif text-3xl font-bold text-editorialTerracotta mt-1">38</div>
+                <span class="text-[10px] text-neutral-500">4 pendientes de respuesta</span>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-warmBorder shadow-xs">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400">Recetas Emitidas</span>
+                <div class="font-serif text-3xl font-bold text-editorialDark mt-1">89</div>
+                <span class="text-[10px] text-medicalGreen font-medium">100% validadas por farmacia</span>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-warmBorder shadow-xs">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400">Honorarios del Mes</span>
+                <div class="font-serif text-3xl font-bold text-medicalGreen mt-1">4.820 €</div>
+                <span class="text-[10px] text-neutral-500">Liquidación automática el 30</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- LISTA DE CITAS DE HOY (7/12) -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 rounded-2xl border border-warmBorder shadow-xs">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="font-serif text-xl font-medium text-editorialDark">Agenda de Consultas de Hoy</h2>
+                        <span class="text-xs font-mono text-neutral-400">Jueves, 15 Octubre</span>
+                    </div>
+
+                    <div class="divide-y divide-warmBorder text-xs">
+                        
+                        <!-- Cita 1 -->
+                        <div class="py-4 flex items-center justify-between gap-4">
+                            <div class="flex items-center gap-3">
+                                <span class="font-mono text-editorialTerracotta font-bold text-xs bg-warmcard px-2.5 py-1.5 rounded-lg border border-warmBorder">15:00</span>
+                                <div>
+                                    <h4 class="font-bold text-editorialDark">Lucía Méndez</h4>
+                                    <p class="text-neutral-500 font-light">Primera consulta: Valoración de rosácea grado II</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] bg-[#ebf5f0] text-medicalGreen px-2 py-0.5 rounded font-bold uppercase">Confirmada</span>
+                                <a href="chat-medico.html" class="px-3 py-1.5 bg-warmcard hover:bg-neutral-200 text-editorialDark rounded-lg text-xs font-semibold transition border border-warmBorder">
+                                    Abrir Chat
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Cita 2 -->
+                        <div class="py-4 flex items-center justify-between gap-4">
+                            <div class="flex items-center gap-3">
+                                <span class="font-mono text-neutral-700 font-bold text-xs bg-warmcard px-2.5 py-1.5 rounded-lg border border-warmBorder">16:30</span>
+                                <div>
+                                    <h4 class="font-bold text-editorialDark">Carla Gómez Morales</h4>
+                                    <p class="text-neutral-500 font-light">Videoconsulta de seguimiento • Dermatitis perioral</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] bg-editorialTerracotta/10 text-editorialTerracotta px-2 py-0.5 rounded font-bold uppercase">En 2 horas</span>
+                                <a href="chat-medico.html" class="px-3 py-1.5 bg-editorialTerracotta hover:bg-[#a35544] text-white rounded-lg text-xs font-bold uppercase transition">
+                                    Iniciar Sala
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Cita 3 -->
+                        <div class="py-4 flex items-center justify-between gap-4">
+                            <div class="flex items-center gap-3">
+                                <span class="font-mono text-neutral-400 font-bold text-xs bg-warmcard px-2.5 py-1.5 rounded-lg border border-warmBorder">18:00</span>
+                                <div>
+                                    <h4 class="font-bold text-editorialDark">Dr. Mateo Salcedo (Ateneo Clínico)</h4>
+                                    <p class="text-neutral-500 font-light">Discusión de caso clínico sobre bioestimuladores</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <a href="caso-clinico.html" class="px-3 py-1.5 bg-warmcard hover:bg-neutral-200 text-editorialDark rounded-lg text-xs font-semibold transition border border-warmBorder">
+                                    Ver Caso
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ARTICULOS PUBLICADOS POR EL DOCTOR -->
+                <div class="bg-white p-6 rounded-2xl border border-warmBorder shadow-xs">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="font-serif text-lg font-medium text-editorialDark">Mis Artículos Científicos Publicados</h2>
+                        <a href="articulos.html" class="text-xs uppercase font-bold text-editorialTerracotta hover:underline">Ver Todos</a>
+                    </div>
+                    <div class="p-4 bg-warmcard rounded-xl border border-warmBorder flex items-center justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold text-editorialTerracotta uppercase">Publicación Nº 18</span>
+                            <h4 class="font-serif text-sm font-medium text-editorialDark mt-0.5">El Futuro de la Bioestimulación Dérmica y Exosomas</h4>
+                            <p class="text-[11px] text-neutral-500 font-light mt-0.5">4.200 lecturas • 38 citas en Social Dream</p>
+                        </div>
+                        <a href="articulo-detalle.html" class="px-3 py-1.5 bg-white text-editorialDark rounded-lg text-xs font-semibold border border-warmBorder">
+                            Ver Online
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRIAGE Y CONSULTAS PENDIENTES (5/12) -->
+            <div class="lg:col-span-5 space-y-6">
+                
+                <div class="bg-white p-6 rounded-2xl border border-warmBorder shadow-xs">
+                    <h2 class="font-serif text-xl font-medium text-editorialDark mb-4">Mensajes Médicos en Espera</h2>
+                    
+                    <div class="space-y-3 text-xs">
+                        <div class="p-4 bg-warmcard rounded-xl border border-warmBorder hover:border-editorialTerracotta transition cursor-pointer" onclick="window.location.href='chat-medico.html'">
+                            <div class="flex justify-between items-center mb-1">
+                                <strong class="text-editorialDark">Carla Gómez</strong>
+                                <span class="text-[10px] text-editorialTerracotta font-mono font-bold">Hace 12 min</span>
+                            </div>
+                            <p class="text-neutral-600 line-clamp-2">"Doctora, he aplicado la emulsión barrera como me indicó y el ardor ha disminuido notablemente..."</p>
+                        </div>
+
+                        <div class="p-4 bg-warmcard rounded-xl border border-warmBorder hover:border-editorialTerracotta transition cursor-pointer" onclick="window.location.href='chat-medico.html'">
+                            <div class="flex justify-between items-center mb-1">
+                                <strong class="text-editorialDark">Javier Sanz</strong>
+                                <span class="text-[10px] text-neutral-400 font-mono">Hace 45 min</span>
+                            </div>
+                            <p class="text-neutral-600 line-clamp-2">"Buenas tardes, adjunto foto de la cicatriz tras la 2ª sesión con láser fraccionado no ablativo."</p>
+                        </div>
+
+                        <div class="p-4 bg-warmcard rounded-xl border border-warmBorder hover:border-editorialTerracotta transition cursor-pointer" onclick="window.location.href='chat-medico.html'">
+                            <div class="flex justify-between items-center mb-1">
+                                <strong class="text-editorialDark">Beatriz Domínguez</strong>
+                                <span class="text-[10px] text-neutral-400 font-mono">Hace 2 horas</span>
+                            </div>
+                            <p class="text-neutral-600 line-clamp-2">"Solicitud de renovación para fotoprotector mineral recetado el mes pasado."</p>
+                        </div>
+                    </div>
+
+                    <a href="chat-medico.html" class="block text-center mt-4 text-xs font-bold uppercase tracking-wider text-editorialTerracotta hover:underline">
+                        Bandeja de Entrada Completa (4) →
+                    </a>
+                </div>
+
+                <!-- CERTIFICACION COLEGIAL -->
+                <div class="p-5 bg-[#ebf5f0] rounded-2xl border border-medicalGreen/20 text-xs">
+                    <div class="flex items-center gap-2 text-medicalGreen font-bold mb-1">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <span>Firma Electrónica Médica Activa</span>
+                    </div>
+                    <p class="text-neutral-600 font-light">
+                        Tus prescripciones se emiten con certificado cualificado FNMT / eIDAS en cumplimiento de la normativa española y europea.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-warmBorder py-6 text-center text-xs text-neutral-400 mt-16">
+        <p>© 2026 DREAM Piel & Salud. Panel Profesional para Especialistas Colegiados.</p>
+    </footer>
+
+    <!-- JS de la aplicación -->
+    <script src="app.js"></script>
+</body>
+</html>

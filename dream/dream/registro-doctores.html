@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acreditación y Registro de Médicos Colegiados | Dream Piel y Salud</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandSurface: '#f8fafd',
+                        brandSurfaceLow: '#ffffff',
+                        brandSurfaceTint: '#edf3f8',
+                        brandAccent: '#1e4b75',
+                        brandAccentLight: '#356d9c',
+                        brandAccentHover: '#143553',
+                        brandDark: '#111c2a',
+                        textMuted: '#586c82',
+                        brandBorder: '#dbe5ee',
+                        statusSuccess: '#1f8a65'
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Bodoni Moda"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-brandSurface text-brandDark font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- CABECERA INSTITUCIONAL CON LOGOTIPO OFICIAL DREAM ECLIPSE -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-md z-40 border-b border-brandBorder shadow-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <span class="font-sans font-bold text-2xl tracking-tight text-brandDark lowercase">dream</span>
+                    <!-- Isotipo Media Luna Creciente en degradado Azul Noche a Zafiro -->
+                    <div class="w-6 h-6 rounded-full border-[3px] border-transparent border-r-[#1e4b75] border-t-[#356d9c] border-b-[#111c2a] rotate-[25deg]"></div>
+                </a>
+                <span class="text-neutral-300">|</span>
+                <span class="text-[11px] font-bold uppercase tracking-widest text-brandAccent bg-brandSurfaceTint px-2.5 py-1 rounded">
+                    Registro Facultativo Oficial
+                </span>
+            </div>
+
+            <div class="flex items-center gap-4 text-xs font-semibold">
+                <span class="hidden sm:flex items-center gap-1.5 text-statusSuccess bg-[#ebf7f2] px-3 py-1 rounded-full text-[11px]">
+                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    Cifrado Sanitario AES-256
+                </span>
+                <a href="login.html" class="text-textMuted hover:text-brandDark transition">
+                    ¿Ya estás colegiado? Inicia Sesión
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CUERPO PRINCIPAL -->
+    <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
+        
+        <!-- STEPPER DE PROGRESO DE ALTA COLEGIADA -->
+        <div class="mb-10 text-center max-w-3xl mx-auto">
+            <h1 class="font-serif text-3xl sm:text-4xl font-normal text-brandDark mb-3">
+                Acreditación y Validación de Médicos Colegiados
+            </h1>
+            <p class="text-xs sm:text-sm text-textMuted font-light leading-relaxed mb-8">
+                Forme parte del cuerpo médico oficial de Revista Dream Piel y Salud. Acceda a la plataforma de teleconsulta cifrada, publicación de casos clínicos arbitrados y prescripción dermocosmética farmacéutica.
+            </p>
+
+            <div class="grid grid-cols-4 gap-2 text-xs font-semibold">
+                <div class="p-3 bg-brandAccent text-white rounded-xl shadow-xs">
+                    <span class="block text-[10px] opacity-75 font-mono">PASO 1</span>
+                    <span>Datos & Especialidad</span>
+                </div>
+                <div class="p-3 bg-white border border-brandBorder text-textMuted rounded-xl">
+                    <span class="block text-[10px] text-neutral-400 font-mono">PASO 2</span>
+                    <span>Colegiatura Oficial</span>
+                </div>
+                <div class="p-3 bg-white border border-brandBorder text-textMuted rounded-xl">
+                    <span class="block text-[10px] text-neutral-400 font-mono">PASO 3</span>
+                    <span>Clínica / Consulta</span>
+                </div>
+                <div class="p-3 bg-white border border-brandBorder text-textMuted rounded-xl">
+                    <span class="block text-[10px] text-neutral-400 font-mono">PASO 4</span>
+                    <span>Deontología & Firma</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- COLUMNA PRINCIPAL DE FORMULARIO (8/12) -->
+            <div class="lg:col-span-8 bg-white p-6 sm:p-10 rounded-2xl border border-brandBorder shadow-sm space-y-8">
+                
+                <!-- SECCIÓN 1: DATOS PERSONALES -->
+                <div>
+                    <h2 class="text-base font-bold uppercase tracking-wider text-brandDark border-b border-brandBorder pb-3 mb-5 flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-brandSurfaceTint text-brandAccent flex items-center justify-center text-xs">1</span>
+                        Identificación Profesional
+                    </h2>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                        <div>
+                            <label class="block font-medium text-neutral-700 mb-1.5">Tratamiento & Nombre Completo</label>
+                            <input type="text" placeholder="Dr. / Dra. Alejandro Gómez" class="w-full px-3.5 py-2.5 rounded-xl border border-brandBorder focus:border-brandAccent focus:ring-1 focus:ring-brandAccent outline-none bg-brandSurface">
+                        </div>
+                        <div>
+                            <label class="block font-medium text-neutral-700 mb-1.5">DNI / NIE Sanitario</label>
+                            <input type="text" placeholder="12345678-Z" class="w-full px-3.5 py-2.5 rounded-xl border border-brandBorder focus:border-brandAccent outline-none bg-brandSurface font-mono">
+                        </div>
+                        <div>
+                            <label class="block font-medium text-neutral-700 mb-1.5">Correo Electrónico Profesional</label>
+                            <input type="email" placeholder="doctor@clinica.es" class="w-full px-3.5 py-2.5 rounded-xl border border-brandBorder focus:border-brandAccent outline-none bg-brandSurface">
+                        </div>
+                        <div>
+                            <label class="block font-medium text-neutral-700 mb-1.5">Teléfono Facultativo Directo</label>
+                            <input type="tel" placeholder="+34 600 000 000" class="w-full px-3.5 py-2.5 rounded-xl border border-brandBorder focus:border-brandAccent outline-none bg-brandSurface">
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="block font-medium text-neutral-700 mb-1.5">Especialidad Médico-Quirúrgica Principal</label>
+                            <select class="w-full px-3.5 py-2.5 rounded-xl border border-brandBorder focus:border-brandAccent outline-none bg-brandSurface text-xs">
+                                <option>Dermatología Médico-Quirúrgica y Venereología</option>
+                                <option>Cirugía Plástica, Estética y Reparadora</option>
+                                <option>Medicina Regenerativa y Longevidad Celular</option>
+                                <option>Fotomedicina Láser y Tecnologías Fraccionadas</option>
+                                <option>Tricología y Trasplante Capilar Avanzado</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECCIÓN 2: COLEGIATURA Y DOCUMENTACIÓN -->
+                <div>
+                    <h2 class="text-base font-bold uppercase tracking-wider text-brandDark border-b border-brandBorder pb-3 mb-5 flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-brandSurfaceTint text-brandAccent flex items-center justify-center text-xs">2</span>
+                        Colegiación Médica Oficial (OMC)
+                    </h2>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs mb-4">
+                        <div>
+                            <label class="block font-medium text-neutral-700 mb-1.5">Número de Colegiado</label>
+                            <input type="text" placeholder="Ej. 28084512" class="w-full px-3.5 py-2.5 rounded-xl border border-brandBorder focus:border-brandAccent outline-none bg-brandSurface font-mono">
+                        </div>
+                        <div>
+                            <label class="block font-medium text-neutral-700 mb-1.5">Colegio Oficial Emisor</label>
+                            <select class="w-full px-3.5 py-2.5 rounded-xl border border-brandBorder focus:border-brandAccent outline-none bg-brandSurface">
+                                <option>Ilustre Colegio Oficial de Médicos de Madrid (ICOMEM)</option>
+                                <option>Col·legi Oficial de Metges de Barcelona (COMB)</option>
+                                <option>Colegio de Médicos de Sevilla</option>
+                                <option>Colegio de Médicos de Valencia</option>
+                                <option>Otro Colegio Oficial de Médicos (España)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- DROPZONE PARA DOCUMENTO ENCRIPTADO -->
+                    <div class="p-6 border-2 border-dashed border-brandBorder hover:border-brandAccent rounded-2xl bg-brandSurface text-center cursor-pointer transition">
+                        <svg class="w-8 h-8 mx-auto text-brandAccent mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                        <p class="text-xs font-semibold text-brandDark">Arrastra tu Título Universitario Oficial o Carnet de Colegiado Vigente</p>
+                        <p class="text-[11px] text-textMuted font-light mt-0.5">Formatos PDF, PNG o JPG de alta resolución (Máx. 25 MB). Cifrado perimetral AES-256.</p>
+                    </div>
+                </div>
+
+                <!-- SECCIÓN 3: UBICACIÓN Y MODALIDAD -->
+                <div>
+                    <h2 class="text-base font-bold uppercase tracking-wider text-brandDark border-b border-brandBorder pb-3 mb-5 flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-brandSurfaceTint text-brandAccent flex items-center justify-center text-xs">3</span>
+                        Consultorio y Modalidad Asistencial
+                    </h2>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                        <div class="sm:col-span-2">
+                            <label class="block font-medium text-neutral-700 mb-1.5">Nombre de la Clínica / Hospital</label>
+                            <input type="text" placeholder="Clínica Dermatológica & Láser Dream" class="w-full px-3.5 py-2.5 rounded-xl border border-brandBorder focus:border-brandAccent outline-none bg-brandSurface">
+                        </div>
+                        <div>
+                            <label class="block font-medium text-neutral-700 mb-1.5">Ciudad</label>
+                            <input type="text" placeholder="Madrid" class="w-full px-3.5 py-2.5 rounded-xl border border-brandBorder outline-none bg-brandSurface">
+                        </div>
+                        <div>
+                            <label class="block font-medium text-neutral-700 mb-1.5">Modalidad de Consulta</label>
+                            <select class="w-full px-3.5 py-2.5 rounded-xl border border-brandBorder outline-none bg-brandSurface">
+                                <option>Híbrida (Presencial en Clínica + Teleconsulta)</option>
+                                <option>Exclusivamente Presencial</option>
+                                <option>Telemedicina Digital Exclusiva</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECCIÓN 4: COMPROMISO BIOÉTICO Y ENVÍO -->
+                <div class="pt-2">
+                    <label class="flex items-start gap-3 cursor-pointer mb-6 text-xs text-textMuted">
+                        <input type="checkbox" checked class="mt-0.5 rounded text-brandAccent focus:ring-brandAccent">
+                        <span>Declaro bajo juramento mi habilitación legal activa y acepto el Código Deontológico de la OMC y el reglamento ético de Revista Dream Piel y Salud.</span>
+                    </label>
+
+                    <div class="flex flex-col sm:flex-row items-center gap-4">
+                        <button onclick="submitDoctorApplication()" class="w-full sm:flex-1 py-4 bg-brandAccent hover:bg-brandAccentHover text-white rounded-xl text-xs font-bold uppercase tracking-widest shadow-md hover:shadow-lg transition flex items-center justify-center gap-2">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            Enviar Solicitud de Acreditación Médica
+                        </button>
+                        <a href="login.html" class="w-full sm:w-auto px-6 py-4 bg-brandSurfaceTint hover:bg-brandBorder text-brandDark rounded-xl text-xs font-semibold text-center transition">
+                            Cancelar
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- COLUMNA DERECHA: CONFIANZA Y PRESTIGIO (4/12) -->
+            <div class="lg:col-span-4 space-y-6">
+                
+                <!-- TARJETA DESTACADA VERIFICACIÓN EN 24-48H -->
+                <div class="bg-gradient-to-br from-[#111c2a] via-[#1e4063] to-[#2b5d8a] text-white p-6 sm:p-8 rounded-2xl shadow-xl">
+                    <div class="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-[#93bbeb] mb-3">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        Auditoría Activa
+                    </div>
+                    <h3 class="font-serif text-2xl font-normal leading-tight mb-2">Verificación Oficial en 24 a 48 Horas</h3>
+                    <p class="text-xs text-neutral-300 font-light leading-relaxed mb-6">
+                        Cada solicitud es contrastada directamente con el Registro General de Colegiados de la Organización Médica Colegial.
+                    </p>
+
+                    <div class="space-y-3 text-xs border-t border-white/10 pt-4">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>Perfil verificado con sello oficial en el directorio</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>Emisión de Receta Médica Electrónica con firma digital</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>Publicación indexada de investigaciones y casos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TESTIMONIO MÉDICO -->
+                <div class="bg-white p-6 rounded-2xl border border-brandBorder shadow-xs text-xs">
+                    <p class="italic text-neutral-700 leading-relaxed font-light mb-4">
+                        "La validación rigurosa en DREAM garantiza un ecosistema totalmente libre de intrusismo profesional y una comunicación de máxima confianza con los pacientes."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Dra. Cadavid" class="w-10 h-10 rounded-full object-cover border border-brandBorder">
+                        <div>
+                            <div class="font-bold text-brandDark">Dra. Marcela Cadavid</div>
+                            <div class="text-[10px] text-textMuted">Comité Asesor Colegiado • Col. #28.910</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER INSTITUCIONAL -->
+    <footer class="bg-brandDark text-white py-10 border-t border-white/10 mt-16 text-center text-xs text-neutral-400">
+        <div class="flex items-center justify-center gap-2 mb-2">
+            <span class="font-bold text-lg text-white">dream</span>
+            <div class="w-4 h-4 rounded-full border-2 border-transparent border-r-[#356d9c] border-t-white rotate-[25deg]"></div>
+            <span class="font-serif text-sm text-neutral-300">Piel & Salud</span>
+        </div>
+        <p class="font-light">Comité Deontológico y Acreditación de Especialistas Sanitarios.</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        function submitDoctorApplication() {
+            showNotification('Solicitud enviada al Comité Deontológico. Redirigiendo a tu panel...');
+            setTimeout(() => {
+                window.location.href = 'dashboard-doctor.html';
+            }, 1800);
+        }
+    </script>
+</body>
+</html>

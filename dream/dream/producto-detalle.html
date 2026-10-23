@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sérum Liposomal de Ácido Ferúlico 15% + Pantenol | Dream Marketplace</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        alabaster: '#fcf9f8',
+                        warmcard: '#f7f3f2',
+                        editorialTerracotta: '#b86553',
+                        editorialDark: '#141313',
+                        medicalGreen: '#2d7a5b',
+                        warmBorder: '#ede7e5'
+                    },
+                    fontFamily: {
+                        serif: ['"Bodoni Moda"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-alabaster text-editorialDark font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- ENCABEZADO -->
+    <header class="sticky top-0 bg-alabaster/90 backdrop-blur-md z-40 border-b border-warmBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="marketplace.html" class="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-neutral-500 hover:text-editorialTerracotta transition font-medium">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    Marketplace Cosmecéutico
+                </a>
+            </div>
+
+            <a href="index.html" class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-center">
+                DREAM <span class="italic font-normal text-xs sm:text-sm tracking-normal block sm:inline font-sans text-neutral-500">Piel & Salud</span>
+            </a>
+
+            <div class="flex items-center gap-4">
+                <a href="carrito.html" class="relative p-2 text-neutral-600 hover:text-editorialDark transition flex items-center gap-1.5">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+                    <span class="text-xs font-semibold hidden sm:inline">Cesta</span>
+                    <span class="cart-badge-count w-4 h-4 rounded-full bg-editorialTerracotta text-white text-[9px] font-bold flex items-center justify-center">2</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- FICHA DE PRODUCTO CLÍNICO -->
+    <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 w-full">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            
+            <!-- GALERIA DE IMAGENES -->
+            <div>
+                <div class="aspect-square w-full rounded-2xl overflow-hidden bg-white border border-warmBorder shadow-sm mb-4 relative group">
+                    <img id="main-product-img" src="https://images.pexels.com/photos/3685538/pexels-photo-3685538.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sérum Liposomal de Ácido Ferúlico" class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 bg-[#2d7a5b] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-sm shadow-sm">
+                        Uso Profesional y Domiciliario
+                    </span>
+                    <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-neutral-800 text-[10px] font-mono px-2.5 py-1 rounded border border-warmBorder">
+                        Lote Farmacéutico #DL-884
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-4 gap-3">
+                    <button onclick="document.getElementById('main-product-img').src='https://images.pexels.com/photos/3685538/pexels-photo-3685538.jpeg?auto=compress&cs=tinysrgb&w=800'" class="aspect-square rounded-xl overflow-hidden border-2 border-editorialTerracotta bg-white">
+                        <img src="https://images.pexels.com/photos/3685538/pexels-photo-3685538.jpeg?auto=compress&cs=tinysrgb&w=200" class="w-full h-full object-cover">
+                    </button>
+                    <button onclick="document.getElementById('main-product-img').src='https://images.pexels.com/photos/4005041/pexels-photo-4005041.jpeg?auto=compress&cs=tinysrgb&w=800'" class="aspect-square rounded-xl overflow-hidden border border-warmBorder bg-white opacity-70 hover:opacity-100 transition">
+                        <img src="https://images.pexels.com/photos/4005041/pexels-photo-4005041.jpeg?auto=compress&cs=tinysrgb&w=200" class="w-full h-full object-cover">
+                    </button>
+                    <button onclick="document.getElementById('main-product-img').src='https://images.pexels.com/photos/4099238/pexels-photo-4099238.jpeg?auto=compress&cs=tinysrgb&w=800'" class="aspect-square rounded-xl overflow-hidden border border-warmBorder bg-white opacity-70 hover:opacity-100 transition">
+                        <img src="https://images.pexels.com/photos/4099238/pexels-photo-4099238.jpeg?auto=compress&cs=tinysrgb&w=200" class="w-full h-full object-cover">
+                    </button>
+                    <div class="aspect-square rounded-xl border border-dashed border-warmBorder flex flex-col items-center justify-center p-2 text-center text-[10px] text-neutral-400">
+                        <span>Ensayo Clínico 2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INFORMACION Y COMPRA -->
+            <div class="flex flex-col">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="text-xs uppercase tracking-widest font-bold text-editorialTerracotta">DERMALAB DREAM BIOTECH</span>
+                    <span class="text-neutral-300">•</span>
+                    <span class="text-xs text-neutral-500">Frasco ámbar con gotero de precisión 30ml</span>
+                </div>
+
+                <h1 class="font-serif text-3xl sm:text-4xl text-editorialDark font-normal leading-tight mb-3">
+                    Sérum Liposomal de Ácido Ferúlico 15% + Pantenol Puro
+                </h1>
+
+                <!-- VALORACIONES Y PRESCRIBIBILIDAD -->
+                <div class="flex items-center gap-4 mb-6 pb-6 border-b border-warmBorder">
+                    <div class="flex items-center text-amber-500">
+                        ★★★★★
+                        <span class="text-xs text-neutral-600 font-semibold ml-1.5">(42 valoraciones médicas)</span>
+                    </div>
+                    <span class="text-neutral-300">|</span>
+                    <span class="text-xs text-medicalGreen font-medium flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        Prescrito por 84 dermatólogos Dream
+                    </span>
+                </div>
+
+                <div class="flex items-baseline gap-3 mb-6">
+                    <span class="font-serif text-3xl font-bold text-editorialDark">68,00 €</span>
+                    <span class="text-xs text-neutral-500">IVA incluido. Envío con control de temperatura opcional.</span>
+                </div>
+
+                <p class="text-sm text-neutral-600 font-light leading-relaxed mb-6">
+                    Antioxidante de grado clínico formulado para neutralizar el estrés oxidativo provocado por la radiación UVA/UVB, luz azul y polución urbana. La encapsulación liposomal asegura una biodisponibilidad transdérmica 8 veces superior al ácido ferúlico convencional sin comprometer la barrera epidérmica.
+                </p>
+
+                <!-- SELECTOR DE CANTIDAD Y BOTON DE COMPRA -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-8">
+                    <div class="flex items-center border border-warmBorder rounded-xl bg-white p-1">
+                        <button onclick="adjustLocalQty(-1)" class="w-10 h-10 flex items-center justify-center text-lg text-neutral-600 hover:text-editorialDark">-</button>
+                        <span id="product-qty" class="w-10 text-center font-bold text-sm">1</span>
+                        <button onclick="adjustLocalQty(1)" class="w-10 h-10 flex items-center justify-center text-lg text-neutral-600 hover:text-editorialDark">+</button>
+                    </div>
+
+                    <button onclick="buyProduct()" class="flex-1 py-4 bg-editorialTerracotta hover:bg-[#a35544] text-white rounded-xl text-xs font-bold uppercase tracking-widest shadow-md hover:shadow-lg transition flex items-center justify-center gap-2">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+                        Añadir a la Cesta
+                    </button>
+
+                    <a href="checkout.html" class="px-6 py-4 bg-editorialDark hover:bg-neutral-800 text-white rounded-xl text-xs font-bold uppercase tracking-widest transition text-center">
+                        Comprar Ya
+                    </a>
+                </div>
+
+                <!-- TABS CIENTÍFICOS: INCI, MODO DE USO, ENSAYOS -->
+                <div class="mt-4" data-tabs-group>
+                    <div class="flex border-b border-warmBorder text-xs uppercase font-bold tracking-wider">
+                        <button data-tab-trigger="inci" class="active pb-3 px-4 border-b-2 border-editorialTerracotta text-editorialTerracotta transition">
+                            Desglose INCI Farmacéutico
+                        </button>
+                        <button data-tab-trigger="rutina" class="pb-3 px-4 text-neutral-500 hover:text-editorialDark transition">
+                            Modo de Empleo
+                        </button>
+                        <button data-tab-trigger="clinica" class="pb-3 px-4 text-neutral-500 hover:text-editorialDark transition">
+                            Estudios Clínicos
+                        </button>
+                    </div>
+
+                    <!-- TAB 1: INCI -->
+                    <div data-tab-content="inci" class="pt-5 space-y-3 text-xs">
+                        <p class="text-neutral-500 font-light">Composición cuantitativa verificada por laboratorios certificados ISO 22716:</p>
+                        <div class="space-y-2">
+                            <div class="p-3 bg-warmcard rounded-lg border border-warmBorder flex justify-between items-center">
+                                <div>
+                                    <strong class="font-mono text-editorialDark">Ferulic Acid (15%)</strong>
+                                    <p class="text-[11px] text-neutral-500">Potente neutralizador de radicales libres y estabilizador biológico.</p>
+                                </div>
+                                <span class="text-[10px] bg-white px-2 py-1 rounded font-bold text-editorialTerracotta border border-warmBorder">Activo Puro</span>
+                            </div>
+                            <div class="p-3 bg-warmcard rounded-lg border border-warmBorder flex justify-between items-center">
+                                <div>
+                                    <strong class="font-mono text-editorialDark">D-Panthenol (5%)</strong>
+                                    <p class="text-[11px] text-neutral-500">Provitamina B5. Calma y acelera la síntesis de lípidos epidérmicos.</p>
+                                </div>
+                                <span class="text-[10px] bg-white px-2 py-1 rounded font-bold text-medicalGreen border border-warmBorder">Reparador</span>
+                            </div>
+                            <div class="p-3 bg-warmcard rounded-lg border border-warmBorder flex justify-between items-center">
+                                <div>
+                                    <strong class="font-mono text-editorialDark">Sodium Hyaluronate (Multi-molecular 1.2%)</strong>
+                                    <p class="text-[11px] text-neutral-500">Cadena corta para captación de agua profunda y cadena larga protectora.</p>
+                                </div>
+                                <span class="text-[10px] bg-white px-2 py-1 rounded font-bold text-neutral-600 border border-warmBorder">Hidratante</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 2: RUTINA -->
+                    <div data-tab-content="rutina" class="pt-5 space-y-3 text-xs hidden">
+                        <ol class="space-y-3 list-decimal list-inside text-neutral-600 font-light">
+                            <li><strong class="font-medium text-editorialDark">Paso 1:</strong> Limpiar suavemente el rostro con un limpiador syndet pH 5.5.</li>
+                            <li><strong class="font-medium text-editorialDark">Paso 2:</strong> Con la piel completamente seca, aplicar 4 a 5 gotas de sérum sobre frente, pómulos y cuello.</li>
+                            <li><strong class="font-medium text-editorialDark">Paso 3:</strong> Presionar con la yema de los dedos mediante suaves toques sin frotar bruscamente.</li>
+                            <li><strong class="font-medium text-editorialDark">Paso 4:</strong> Dejar absorber 60 segundos antes de aplicar crema hidratante o fotoprotector SPF 50+.</li>
+                        </ol>
+                    </div>
+
+                    <!-- TAB 3: CLINICA -->
+                    <div data-tab-content="clinica" class="pt-5 space-y-3 text-xs hidden">
+                        <p class="text-neutral-600 font-light leading-relaxed">
+                            Ensayo doble ciego realizado sobre 60 voluntarios durante 8 semanas bajo supervisión dermatológica:
+                        </p>
+                        <div class="grid grid-cols-2 gap-3 mt-3">
+                            <div class="bg-warmcard p-3 rounded-lg text-center">
+                                <span class="font-serif text-xl font-bold text-editorialTerracotta">-47%</span>
+                                <p class="text-[10px] text-neutral-500 mt-1">Reducción de manchas solares superficiales</p>
+                            </div>
+                            <div class="bg-warmcard p-3 rounded-lg text-center">
+                                <span class="font-serif text-xl font-bold text-medicalGreen">+62%</span>
+                                <p class="text-[10px] text-neutral-500 mt-1">Mejora de luminosidad cutánea medida por espectrofotometría</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- DOCTORES QUE LO RECOMIENDAN -->
+        <section class="mt-20 pt-10 border-t border-warmBorder">
+            <h3 class="font-serif text-2xl font-normal text-editorialDark mb-6">Recomendado por Especialistas Verificados</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-6 bg-white rounded-2xl border border-warmBorder flex items-center gap-4">
+                    <img src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Dra. Cadavid" class="w-14 h-14 rounded-full object-cover">
+                    <div>
+                        <h4 class="font-serif text-base font-medium text-editorialDark">Dra. Marcela Cadavid</h4>
+                        <p class="text-xs text-editorialTerracotta">Directora Unidad Láser • Col. #28.910</p>
+                        <p class="text-xs text-neutral-500 font-light mt-1">"Es mi pilar post-tratamiento de IPL y láser fraccionado no ablativo."</p>
+                    </div>
+                </div>
+                <div class="p-6 bg-white rounded-2xl border border-warmBorder flex items-center gap-4">
+                    <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Dr. Marcos Rivera" class="w-14 h-14 rounded-full object-cover">
+                    <div>
+                        <h4 class="font-serif text-base font-medium text-editorialDark">Dr. Marcos Rivera</h4>
+                        <p class="text-xs text-editorialTerracotta">Cirujano Plástico Facial • Col. #30.412</p>
+                        <p class="text-xs text-neutral-500 font-light mt-1">"La estabilidad de la fórmula previene la oxidación prematura del producto en frasco."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#141313] text-white py-10 border-t border-white/10 mt-16 text-center text-xs text-neutral-400">
+        <p class="font-serif text-base text-white mb-2">DREAM MARKETPLACE COSMECÉUTICO</p>
+        <p class="font-light">Productos con trazabilidad garantizada desde laboratorios hospitalarios y dermocosméticos certificados.</p>
+    </footer>
+
+    <!-- JS de la aplicación -->
+    <script src="app.js"></script>
+    <script>
+        let currentQty = 1;
+        function adjustLocalQty(delta) {
+            currentQty = Math.max(1, currentQty + delta);
+            document.getElementById('product-qty').textContent = currentQty;
+        }
+
+        function buyProduct() {
+            const product = {
+                id: 'prod-ferulico',
+                name: 'Sérum Liposomal de Ácido Ferúlico 15% + Pantenol',
+                lab: 'DERMALAB DREAM BIOTECH',
+                price: 68.00,
+                quantity: currentQty,
+                image: 'https://images.pexels.com/photos/3685538/pexels-photo-3685538.jpeg?auto=compress&cs=tinysrgb&w=300'
+            };
+            // Usar addToCart de app.js tantas veces como cantidad seleccionada
+            for(let i=0; i < currentQty; i++) {
+                addToCart(product);
+            }
+        }
+    </script>
+</body>
+</html>

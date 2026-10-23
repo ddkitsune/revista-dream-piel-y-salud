@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bioestimulación y Exosomas Dérmicos | Lectura Científica - Dream Piel y Salud</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        alabaster: '#fcf9f8',
+                        warmcard: '#f7f3f2',
+                        editorialTerracotta: '#b86553',
+                        editorialDark: '#141313',
+                        medicalGreen: '#2d7a5b',
+                        warmBorder: '#ede7e5'
+                    },
+                    fontFamily: {
+                        serif: ['"Bodoni Moda"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-alabaster text-editorialDark font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- BARRA SUPERIOR DE PROGRESO DE LECTURA -->
+    <div id="read-progress" class="fixed top-0 left-0 h-1 bg-editorialTerracotta z-50 transition-all duration-150" style="width: 0%;"></div>
+
+    <!-- ENCABEZADO EDITORIAL -->
+    <header class="sticky top-0 bg-alabaster/90 backdrop-blur-md z-40 border-b border-warmBorder transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="articulos.html" class="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-neutral-500 hover:text-editorialTerracotta transition font-medium">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    Artículos
+                </a>
+                <span class="text-neutral-300">|</span>
+                <span class="text-[11px] font-semibold uppercase tracking-widest text-editorialTerracotta bg-[#faece8] px-2.5 py-0.5 rounded">Medicina Regenerativa</span>
+            </div>
+
+            <a href="index.html" class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-center">
+                DREAM <span class="italic font-normal text-xs sm:text-sm tracking-normal block sm:inline font-sans text-neutral-500">Piel & Salud</span>
+            </a>
+
+            <div class="flex items-center gap-3">
+                <button onclick="window.print()" class="hidden sm:inline-flex p-2 text-neutral-600 hover:text-editorialDark transition" title="Imprimir o guardar PDF">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" /></svg>
+                </button>
+                <button class="p-2 text-neutral-600 hover:text-editorialTerracotta transition" title="Compartir">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" /></svg>
+                </button>
+                <a href="carrito.html" class="relative p-2 text-neutral-600 hover:text-editorialDark transition">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+                    <span class="cart-badge-count absolute top-0.5 right-0.5 w-4 h-4 rounded-full bg-editorialTerracotta text-white text-[9px] font-bold flex items-center justify-center">2</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CUERPO PRINCIPAL DEL ARTÍCULO -->
+    <main class="flex-1 max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+        
+        <!-- HEADER DEL ARTICULO -->
+        <div class="mb-8 text-center sm:text-left">
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 text-xs text-neutral-500 mb-4">
+                <span class="font-semibold text-editorialDark">Dra. Elena Valdés</span>
+                <span>•</span>
+                <span>Cirugía Plástica Facial & Biotecnología</span>
+                <span>•</span>
+                <span class="inline-flex items-center gap-1 text-medicalGreen font-medium bg-[#ebf5f0] px-2 py-0.5 rounded text-[10px]">
+                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    Revisión Médica por Pares
+                </span>
+                <span>•</span>
+                <span>Tiempo de lectura: 8 min</span>
+            </div>
+
+            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl text-editorialDark font-normal leading-[1.12] mb-6">
+                El Futuro de la Bioestimulación Dérmica y el Rejuvenecimiento Celular
+            </h1>
+
+            <p class="text-base sm:text-xl text-neutral-600 font-light leading-relaxed">
+                De exosomas a polinucleótidos biocompatibles: cómo la medicina regenerativa de precisión está redefiniendo los estándares moleculares de la longevidad dérmica.
+            </p>
+        </div>
+
+        <!-- REPRODUCTOR DE VERSIÓN AUDIO NARRADA -->
+        <div class="bg-warmcard p-4 sm:p-5 rounded-2xl border border-warmBorder mb-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3 w-full sm:w-auto">
+                <button data-podcast-toggle class="w-12 h-12 rounded-full bg-editorialTerracotta hover:bg-[#a35544] flex items-center justify-center text-white shadow-md transition shrink-0">
+                    <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-editorialDark">Escuchar artículo narrado</h4>
+                    <p class="text-[11px] text-neutral-500 font-light">Voz de la Dra. Elena Valdés • 08:34 min</p>
+                </div>
+            </div>
+            <div class="w-full sm:w-64 flex items-center gap-2">
+                <span class="text-[10px] text-neutral-400 font-mono">01:42</span>
+                <div class="flex-1 bg-warmBorder h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-editorialTerracotta h-full w-1/4 rounded-full"></div>
+                </div>
+                <span class="text-[10px] text-neutral-400 font-mono">08:34</span>
+            </div>
+        </div>
+
+        <!-- IMAGEN PRINCIPAL EDITORIAL -->
+        <figure class="mb-12">
+            <div class="aspect-video w-full rounded-2xl overflow-hidden shadow-sm border border-warmBorder">
+                <img src="https://images.pexels.com/photos/4099238/pexels-photo-4099238.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Bioestimulación dérmica avanzada" class="w-full h-full object-cover">
+            </div>
+            <figcaption class="mt-3 text-xs text-neutral-500 font-light italic text-center sm:text-left">
+                Microscopía de fluorescencia mostrando la síntesis de colágeno tipo I tras estímulo con exosomas liofilizados en cultivo de fibroblastos. DREAM Labs 2026.
+            </figcaption>
+        </figure>
+
+        <!-- TEXTO CIENTÍFICO FORMATO REVISTA -->
+        <div class="prose prose-neutral max-w-none text-neutral-800 leading-relaxed space-y-6 text-sm sm:text-base">
+            <p class="first-letter:font-serif first-letter:text-6xl first-letter:font-bold first-letter:text-editorialTerracotta first-letter:mr-3 first-letter:float-left first-letter:leading-none">
+                La medicina estética y la dermatología clínica han transitado una metamorfosis histórica. Durante décadas, el abordaje contra el envejecimiento cutáneo se limitó a compensar pérdidas volumétricas mediante rellenos de ácido hialurónico reticulado o inhibir la contracción motora mediante toxina botulínica. Sin embargo, el paradigma biológico actual no busca ocultar el paso del tiempo, sino reprogramar las señales moleculares que orquestan el deterioro celular.
+            </p>
+
+            <h2 class="font-serif text-2xl sm:text-3xl font-medium text-editorialDark mt-10 mb-4">
+                1. ¿Qué son los exosomas y por qué transforman la dermatología?
+            </h2>
+
+            <p>
+                Los exosomas son vesículas extracelulares nanométricas (de entre 30 y 150 nanómetros) secretadas por células madre mesenquimales. Lejos de ser simples desechos metabólicos, representan el vehículo de comunicación intercelular más sofisticado del organismo humano. Contienen un cargamento de alta densidad formado por micro-ARN, factores de crecimiento fibroblástico (bFGF), factor transformante beta (TGF-β) y ceramidas biomiméticas.
+            </p>
+
+            <!-- CITA EDITORIAL DESTACADA -->
+            <blockquote class="my-8 pl-6 border-l-4 border-editorialTerracotta italic font-serif text-lg sm:text-2xl text-editorialDark bg-[#fdf8f6] py-4 pr-4 rounded-r-lg">
+                "No inyectamos volumen inerte; instruimos a los fibroblastos envejecidos para que retomen el patrón transcripcional de una dermis quince años más joven."
+            </blockquote>
+
+            <p>
+                Al ser introducidos en la matriz dérmica profunda —frecuentemente combinados con tecnologías fraccionadas como radiofrecuencia con microagujas o láser tulio—, los exosomas fusionan su membrana con los fibroblastos quiescentes. El resultado es un incremento documentado de hasta un <strong>320% en la producción de colágeno tipo I y tipo III</strong>, así como un aumento sostenido en la expresión de elastina estructural.
+            </p>
+
+            <!-- TABLA COMPARATIVA CIENTÍFICA -->
+            <div class="my-10 overflow-x-auto">
+                <table class="w-full text-left border-collapse border border-warmBorder rounded-xl overflow-hidden text-xs sm:text-sm">
+                    <thead class="bg-warmcard border-b border-warmBorder font-semibold text-editorialDark uppercase tracking-wider text-[11px]">
+                        <tr>
+                            <th class="p-3.5">Parámetro Biológico</th>
+                            <th class="p-3.5">Polinucleótidos (PDRN)</th>
+                            <th class="p-3.5">Exosomas Autólogos/Purificados</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-warmBorder text-neutral-600">
+                        <tr class="hover:bg-white/60 transition">
+                            <td class="p-3.5 font-medium text-editorialDark">Mecanismo Primario</td>
+                            <td class="p-3.5">Rescate vía receptores de adenosina A2A y vía de rescate de nucleótidos</td>
+                            <td class="p-3.5">Transferencia de ARN mensajero e inducción epigenética directa</td>
+                        </tr>
+                        <tr class="hover:bg-white/60 transition">
+                            <td class="p-3.5 font-medium text-editorialDark">Neoangiogénesis</td>
+                            <td class="p-3.5 text-medicalGreen font-medium">Alta (óptima para cicatrices y atrofia)</td>
+                            <td class="p-3.5">Moderada a Alta (equilibrada con antiinflamación)</td>
+                        </tr>
+                        <tr class="hover:bg-white/60 transition">
+                            <td class="p-3.5 font-medium text-editorialDark">Perfil de Seguridad</td>
+                            <td class="p-3.5">Inmunológicamente inerte (origen trucha/salmón ultrafiltrado)</td>
+                            <td class="p-3.5">Requiere cadena de frío estricta y certificación biológica EU/FDA</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 class="font-serif text-2xl sm:text-3xl font-medium text-editorialDark mt-10 mb-4">
+                2. Consideraciones Clínicas y Certificación Médica
+            </h2>
+
+            <p>
+                La aplicación de exosomas debe ser estrictamente realizada bajo supervisión de un médico especialista certificado en dermatología clínica o medicina estética avanzada. La proliferación de productos cosméticos de venta libre que afirman contener "exosomas vivos" a temperatura ambiente constituye un despropósito biológico: sin liofilización criogénica o almacenamiento a -80°C, las vesículas lipídicas se degradan en cuestión de horas.
+            </p>
+
+            <!-- ENLACE DIRECTO A CASO CLÍNICO -->
+            <div class="mt-8 p-6 bg-white rounded-2xl border border-warmBorder shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-medicalGreen bg-[#ebf5f0] px-2.5 py-0.5 rounded">Evidencia Documentada</span>
+                    <h3 class="font-serif text-lg font-medium text-editorialDark mt-2">Explora la evolución de 12 semanas en paciente de 54 años</h3>
+                    <p class="text-xs text-neutral-500 font-light mt-1">Visor interactivo de fotografía clínica estandarizada con filtro de polarización cruzada.</p>
+                </div>
+                <a href="caso-clinico.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-editorialDark hover:bg-neutral-800 text-white rounded-lg text-xs font-semibold uppercase tracking-wider transition shrink-0">
+                    Ver Caso Clínico
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- TARJETA DEL AUTOR MÉDICO -->
+        <section class="mt-14 pt-8 border-t border-warmBorder">
+            <div class="bg-warmcard p-6 sm:p-8 rounded-2xl border border-warmBorder flex flex-col sm:flex-row gap-6 items-center sm:items-start text-center sm:text-left">
+                <img src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Dra. Elena Valdés" class="w-24 h-24 rounded-full object-cover border-2 border-editorialTerracotta/30 shrink-0">
+                <div class="flex-1">
+                    <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1">
+                        <h4 class="font-serif text-xl font-medium text-editorialDark">Dra. Elena Valdés</h4>
+                        <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-medicalGreen bg-white px-2 py-0.5 rounded border border-medicalGreen/20">
+                            Col. Médica #41.882-M
+                        </span>
+                    </div>
+                    <p class="text-xs text-editorialTerracotta font-medium mb-3">Especialista en Rejuvenecimiento Facial Mínimamente Invasivo • Clínica Dream Madrid</p>
+                    <p class="text-xs text-neutral-600 font-light leading-relaxed mb-4">
+                        Doctora en Medicina Cum Laude por la UCM. Investigadora principal en ensayos fase II sobre inductores biológicos de colágeno y miembro del comité editorial de Dream Piel & Salud.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3">
+                        <a href="perfil-especialista.html" class="px-4 py-2 bg-editorialTerracotta hover:bg-[#a35544] text-white rounded-lg text-xs font-bold uppercase tracking-wider transition">
+                            Agendar Cita Médica
+                        </a>
+                        <a href="chat-medico.html" class="px-4 py-2 bg-white hover:bg-neutral-50 text-editorialDark border border-warmBorder rounded-lg text-xs font-semibold tracking-wider transition">
+                            Enviar Consulta Previa
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ARTICULOS RELACIONADOS -->
+        <section class="mt-14 pt-8 border-t border-warmBorder">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="font-serif text-xl sm:text-2xl font-medium text-editorialDark">Lecturas Recomendadas</h3>
+                <a href="articulos.html" class="text-xs uppercase tracking-wider text-editorialTerracotta font-semibold hover:underline">Ver Todo</a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <a href="articulo-detalle.html" class="group block bg-white p-4 rounded-xl border border-warmBorder hover:border-editorialTerracotta transition shadow-sm">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-3 bg-neutral-100">
+                        <img src="https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Polinucleótidos perioculares" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-editorialTerracotta">Ensayos Clínicos</span>
+                    <h4 class="font-serif text-base font-normal text-editorialDark group-hover:text-editorialTerracotta transition mt-1">Polinucleótidos en la zona periocular: el adiós a la ojera pigmentada</h4>
+                    <p class="text-xs text-neutral-500 font-light mt-1">Dr. Marcos Rivera • 6 min de lectura</p>
+                </a>
+                <a href="articulo-detalle.html" class="group block bg-white p-4 rounded-xl border border-warmBorder hover:border-editorialTerracotta transition shadow-sm">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-3 bg-neutral-100">
+                        <img src="https://images.pexels.com/photos/3685538/pexels-photo-3685538.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Cosmecéutica y pH cutáneo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-editorialTerracotta">Bioquímica de la Piel</span>
+                    <h4 class="font-serif text-base font-normal text-editorialDark group-hover:text-editorialTerracotta transition mt-1">Cómo formular una rutina con vitamina C pura sin desestabilizar el manto lipídico</h4>
+                    <p class="text-xs text-neutral-500 font-light mt-1">Dra. Claudia Ortega • 5 min de lectura</p>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER EDITORIAL -->
+    <footer class="bg-[#141313] text-white py-12 border-t border-white/10 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-neutral-400">
+            <p class="font-serif text-lg text-white mb-2">REVISTA DREAM PIEL & SALUD</p>
+            <p class="font-light mb-4">Publicación médica y científica sujeta a arbitraje por el Colegio Oficial de Médicos. ISSN 2891-9012.</p>
+            <div class="flex justify-center gap-6 text-neutral-400 text-xs">
+                <a href="index.html" class="hover:text-white transition">Inicio</a>
+                <a href="articulos.html" class="hover:text-white transition">Artículos</a>
+                <a href="especialistas.html" class="hover:text-white transition">Directorio Médico</a>
+                <a href="marketplace.html" class="hover:text-white transition">Marketplace</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS de la aplicación -->
+    <script src="app.js"></script>
+    <script>
+        // Barra de progreso de lectura interactiva
+        window.addEventListener('scroll', () => {
+            const h = document.documentElement, 
+                  b = document.body,
+                  st = 'scrollTop',
+                  sh = 'scrollHeight';
+            const percent = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+            document.getElementById('read-progress').style.width = percent + '%';
+        });
+    </script>
+</body>
+</html>

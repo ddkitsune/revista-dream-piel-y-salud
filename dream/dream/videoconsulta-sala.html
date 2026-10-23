@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videoconsulta Médica Cifrada en Directo | Dream Piel y Salud</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandSurface: '#f8fafd',
+                        brandSurfaceLow: '#ffffff',
+                        brandSurfaceTint: '#edf3f8',
+                        brandAccent: '#1e4b75',
+                        brandAccentLight: '#356d9c',
+                        brandAccentHover: '#143553',
+                        brandDark: '#111c2a',
+                        textMuted: '#586c82',
+                        brandBorder: '#dbe5ee',
+                        statusSuccess: '#1f8a65'
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Bodoni Moda"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#0b131d] text-white font-sans antialiased h-screen flex flex-col overflow-hidden">
+
+    <!-- CABECERA DE LA SALA VIRTUAL -->
+    <header class="bg-[#111c2a] border-b border-white/10 px-4 sm:px-6 py-3 flex items-center justify-between shrink-0 z-30">
+        <div class="flex items-center gap-3">
+            <a href="expediente-paciente.html" class="p-2 text-neutral-400 hover:text-white transition" title="Salir de la sala">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+            </a>
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-xl text-white tracking-tight">dream</span>
+                <div class="w-5 h-5 rounded-full border-2 border-transparent border-r-[#356d9c] border-t-white rotate-[25deg]"></div>
+                <span class="text-xs uppercase font-bold tracking-widest text-[#93bbeb] ml-1">Telemedicina Quirúrgica HD</span>
+            </div>
+            <span class="text-neutral-500 hidden sm:inline">|</span>
+            <span class="hidden sm:inline-flex items-center gap-1.5 text-[11px] text-emerald-400 font-mono">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                Sala Cifrada AES-256 RGPD Sanitario
+            </span>
+        </div>
+
+        <div class="flex items-center gap-3">
+            <div class="flex items-center gap-2 text-xs font-mono bg-white/10 px-3 py-1.5 rounded-lg border border-white/10">
+                <span class="text-neutral-400">Tiempo de consulta:</span>
+                <span id="call-timer" class="font-bold text-white">18:42</span>
+            </div>
+            <button onclick="endConsultation()" class="px-4 py-1.5 bg-red-600 hover:bg-red-700 text-white rounded-lg text-xs font-bold uppercase tracking-wider transition flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13 2.257a11.042 11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z"/></svg>
+                Finalizar Consulta
+            </button>
+        </div>
+    </header>
+
+    <!-- AREA CENTRAL: PANTALLA DIVIDIDA DOCTOR/PACIENTE + HERRAMIENTA DERMATOLÓGICA -->
+    <div class="flex-1 flex overflow-hidden">
+        
+        <!-- PANTALLA DE VIDEO PRINCIPAL (IZQUIERDA) -->
+        <div class="flex-1 flex flex-col p-4 relative justify-between bg-black">
+            
+            <!-- GRID DE CAMARAS DIVIDIDA (DOCTOR GRANDE / PACIENTE PIP) -->
+            <div class="relative w-full h-full rounded-2xl overflow-hidden border border-white/15 bg-neutral-900 shadow-2xl flex items-center justify-center">
+                
+                <!-- Video del Doctor Principal (Dra. Cadavid) -->
+                <img src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Dra. Cadavid en Consulta" class="w-full h-full object-cover">
+
+                <!-- Overlay de Puntero de Dermatoscopia -->
+                <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none flex flex-col items-center animate-pulse">
+                    <div class="w-16 h-16 rounded-full border-2 border-emerald-400 bg-emerald-400/20 flex items-center justify-center">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                    </div>
+                    <span class="bg-black/80 text-emerald-300 text-[10px] font-mono px-2 py-0.5 rounded mt-1 border border-emerald-400/30">
+                        Puntero Clínico: Zona de eritema analizada
+                    </span>
+                </div>
+
+                <!-- Video del Paciente en Esquina (PiP) -->
+                <div class="absolute bottom-5 right-5 w-44 sm:w-56 aspect-video rounded-xl overflow-hidden border-2 border-white/30 shadow-2xl bg-neutral-800">
+                    <img src="https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Paciente Carla Gómez" class="w-full h-full object-cover">
+                    <div class="absolute bottom-1.5 left-2 bg-black/60 px-2 py-0.5 rounded text-[10px] font-medium text-white">
+                        Carla Gómez (Tú)
+                    </div>
+                </div>
+
+                <!-- Badge del Doctor en Pantalla -->
+                <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/15 flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                    <span class="text-xs font-semibold text-white">Dra. Marcela Cadavid</span>
+                    <span class="text-[10px] text-neutral-400 font-mono">Col. #28.910</span>
+                </div>
+            </div>
+
+            <!-- BARRA INFERIOR FLOTANTE DE CONTROLES SANITARIOS -->
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 bg-[#111c2a]/90 backdrop-blur-md border border-white/20 rounded-2xl px-6 py-3 flex items-center gap-4 shadow-2xl z-20">
+                <button onclick="toggleControl(this, 'Micrófono')" class="p-3 bg-white/10 hover:bg-white/20 text-white rounded-xl transition" title="Silenciar micrófono">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
+                </button>
+                <button onclick="toggleControl(this, 'Cámara')" class="p-3 bg-white/10 hover:bg-white/20 text-white rounded-xl transition" title="Apagar cámara">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                </button>
+                <button onclick="showNotification('Puntero dermatológico activado para diagnóstico')" class="p-3 bg-[#1e4b75] hover:bg-[#356d9c] text-white rounded-xl transition flex items-center gap-2 text-xs font-bold uppercase tracking-wider">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/></svg>
+                    Puntero Dérmico
+                </button>
+                <button onclick="showNotification('Abriendo visor de macrofotografía dermatológica')" class="p-3 bg-white/10 hover:bg-white/20 text-white rounded-xl transition" title="Compartir dermatoscopia">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- PANEL LATERAL CLÍNICO: CHAT + RECETA ELECTRÓNICA EN VIVO (DERECHA 340px) -->
+        <aside class="w-80 sm:w-96 bg-[#111c2a] border-l border-white/10 flex flex-col justify-between shrink-0">
+            
+            <!-- HEADER PANEL -->
+            <div class="p-4 border-b border-white/10 flex items-center justify-between">
+                <h3 class="font-bold text-xs uppercase tracking-wider text-white">Expediente en Directo</h3>
+                <span class="text-[10px] bg-emerald-500/20 text-emerald-400 font-mono px-2 py-0.5 rounded">En línea</span>
+            </div>
+
+            <!-- CHAT INTERACTIVO DURANTE LA CONSULTA -->
+            <div class="flex-1 p-4 overflow-y-auto space-y-3 text-xs">
+                <div class="bg-white/5 p-3 rounded-xl border border-white/10 text-neutral-300">
+                    <strong class="text-emerald-400 text-[11px] block mb-1">Dra. Marcela Cadavid</strong>
+                    He marcado la zona del pómulo izquierdo en la pantalla para que notes el borde activo de la descamación.
+                </div>
+                <div class="bg-[#1e4b75]/30 p-3 rounded-xl border border-[#356d9c]/30 text-white ml-4">
+                    <strong class="text-neutral-300 text-[11px] block mb-1">Carla Gómez</strong>
+                    Sí, doctora, lo veo claramente con el puntero verde.
+                </div>
+            </div>
+
+            <!-- MÓDULO EMISIÓN DE RECETA EN VIVO -->
+            <div class="p-4 bg-white/5 border-t border-white/10 space-y-3">
+                <div class="flex items-center justify-between text-xs">
+                    <span class="font-bold uppercase tracking-wider text-[#93bbeb] flex items-center gap-1.5">
+                        <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        Prescripción Oficial #RX-9921
+                    </span>
+                    <span class="text-[10px] font-mono text-neutral-400">Firmado digitalmente</span>
+                </div>
+                <p class="text-[11px] text-neutral-300">Emulsión Barrera Calmante con Ceramidas y Centella Asiática 50ml.</p>
+                <div class="flex gap-2">
+                    <button onclick="showNotification('Receta vinculada a tu expediente. Lista para canjear en farmacia.')" class="flex-1 py-2 bg-[#1e4b75] hover:bg-[#356d9c] text-white text-[11px] font-bold uppercase rounded-lg transition text-center">
+                        Canjear en Farmacia
+                    </button>
+                    <a href="expediente-paciente.html" class="px-3 py-2 bg-white/10 hover:bg-white/20 text-white text-[11px] font-semibold rounded-lg transition text-center">
+                        Expediente
+                    </a>
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        function toggleControl(btn, name) {
+            btn.classList.toggle('bg-red-600');
+            showNotification(`${name} alternado`);
+        }
+        function endConsultation() {
+            showNotification('Finalizando videoconsulta... Guardando informe clínico en tu expediente.');
+            setTimeout(() => {
+                window.location.href = 'expediente-paciente.html';
+            }, 1600);
+        }
+    </script>
+</body>
+</html>

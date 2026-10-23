@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso Clínico #C-209: Rejuvenecimiento Periorbital con Polinucleótidos | Dream Piel y Salud</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        alabaster: '#fcf9f8',
+                        warmcard: '#f7f3f2',
+                        editorialTerracotta: '#b86553',
+                        editorialDark: '#141313',
+                        medicalGreen: '#2d7a5b',
+                        warmBorder: '#ede7e5'
+                    },
+                    fontFamily: {
+                        serif: ['"Bodoni Moda"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos del Slider de Antes y Después */
+        .before-after-slider {
+            position: relative;
+            overflow: hidden;
+            user-select: none;
+        }
+        .before-after-slider .after-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+        }
+        .before-after-slider .slider-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: #ffffff;
+            cursor: ew-resize;
+            pointer-events: none;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        .before-after-slider .slider-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 36px;
+            height: 36px;
+            background: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #141313;
+        }
+        .before-after-slider input[type="range"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: ew-resize;
+            z-index: 20;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="bg-alabaster text-editorialDark font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- NAVEGACIÓN PRINCIPAL -->
+    <header class="sticky top-0 bg-alabaster/90 backdrop-blur-md z-40 border-b border-warmBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="articulos.html" class="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-neutral-500 hover:text-editorialTerracotta transition font-medium">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    Casos Clínicos
+                </a>
+                <span class="text-neutral-300">|</span>
+                <span class="text-[11px] font-semibold uppercase tracking-widest text-medicalGreen bg-[#ebf5f0] px-2.5 py-0.5 rounded">Consentimiento Informado Verificado</span>
+            </div>
+
+            <a href="index.html" class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-center">
+                DREAM <span class="italic font-normal text-xs sm:text-sm tracking-normal block sm:inline font-sans text-neutral-500">Piel & Salud</span>
+            </a>
+
+            <div class="flex items-center gap-3">
+                <a href="especialistas.html" class="text-xs uppercase tracking-wider font-semibold text-editorialTerracotta hover:text-[#a35544] transition hidden sm:inline-block">
+                    Directorio Médico
+                </a>
+                <a href="carrito.html" class="relative p-2 text-neutral-600 hover:text-editorialDark transition">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+                    <span class="cart-badge-count absolute top-0.5 right-0.5 w-4 h-4 rounded-full bg-editorialTerracotta text-white text-[9px] font-bold flex items-center justify-center">2</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CUERPO PRINCIPAL DEL CASO -->
+    <main class="flex-1 max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14 w-full">
+        
+        <!-- HEADER METADATA -->
+        <div class="mb-8 border-b border-warmBorder pb-6">
+            <div class="flex flex-wrap items-center gap-3 text-xs text-neutral-500 mb-3">
+                <span class="px-2.5 py-0.5 bg-neutral-900 text-white font-mono rounded text-[10px] uppercase font-bold">Registro: #C-209-ES</span>
+                <span>•</span>
+                <span>Publicado: Octubre 2026</span>
+                <span>•</span>
+                <span class="text-medicalGreen font-medium flex items-center gap-1">
+                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    Aprobado por Comité Deontológico
+                </span>
+            </div>
+
+            <h1 class="font-serif text-3xl sm:text-5xl text-editorialDark font-normal leading-tight mb-4">
+                Resolución de Elastosis Cutánea y Arrugas Finas Periorbitales mediante Polinucleótidos PDRN 2.5%
+            </h1>
+
+            <p class="text-sm sm:text-base text-neutral-600 font-light max-w-3xl">
+                Protocolo de 3 sesiones espaciadas cada 21 días utilizando técnica multipunto micro-pápula con aguja 34G de 1.5mm. Evaluación fotográfica digital con iluminación polarizada estandarizada a los 60 días pos-tratamiento.
+            </p>
+        </div>
+
+        <!-- SLIDER INTERACTIVO DE ANTES Y DESPUES -->
+        <div class="mb-12">
+            <div class="flex items-center justify-between mb-3 text-xs">
+                <span class="font-bold uppercase tracking-wider text-editorialDark flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-editorialTerracotta animate-pulse"></span>
+                    Visor Clínico Interactivo (Desliza hacia los lados)
+                </span>
+                <div class="flex gap-4 font-mono text-[11px] text-neutral-500">
+                    <span class="bg-neutral-200/80 px-2 py-0.5 rounded font-semibold text-neutral-800">IZQ: ANTES (DÍA 0)</span>
+                    <span class="bg-[#ebf5f0] px-2 py-0.5 rounded font-semibold text-medicalGreen">DER: DESPUÉS (DÍA 60)</span>
+                </div>
+            </div>
+
+            <!-- CONTENEDOR DEL SLIDER -->
+            <div class="before-after-slider relative w-full aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden shadow-lg border border-warmBorder bg-neutral-900">
+                <!-- FOTO ANTES -->
+                <img src="https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Antes del tratamiento de elastosis periocular" class="w-full h-full object-cover">
+                
+                <!-- FOTO DESPUES (CLIP PATH) -->
+                <div class="after-image">
+                    <img src="https://images.pexels.com/photos/3762871/pexels-photo-3762871.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Después del tratamiento de elastosis periocular" class="w-full h-full object-cover">
+                </div>
+
+                <!-- LÍNEA Y MANIJA CENTRAL -->
+                <div class="slider-handle">
+                    <div class="slider-button">
+                        <svg class="w-4 h-4 text-editorialDark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l4-4 4 4m0 6l-4 4-4-4" transform="rotate(90 12 12)" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- INPUT RANGE OCULTO PARA INTERACCIÓN CON RATÓN Y TOQUE -->
+                <input type="range" min="0" max="100" value="50" aria-label="Porcentaje de visualización antes y después">
+            </div>
+
+            <p class="text-xs text-neutral-500 text-center mt-2 italic font-light">
+                *Imágenes no retocadas digitalmente. Mismas condiciones de distancia focal, balance de blancos e intensidad lumínica (D65).
+            </p>
+        </div>
+
+        <!-- DETALLES TÉCNICOS DEL CASO EN 3 COLUMNAS -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <!-- Columna 1: Datos del Paciente -->
+            <div class="bg-warmcard p-5 rounded-2xl border border-warmBorder">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-editorialDark mb-4 flex items-center gap-2">
+                    <svg class="w-4 h-4 text-editorialTerracotta" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                    Perfil del Paciente
+                </h3>
+                <ul class="text-xs space-y-2.5 text-neutral-600 font-light">
+                    <li><strong class="text-editorialDark font-medium">Edad:</strong> 52 años</li>
+                    <li><strong class="text-editorialDark font-medium">Fototipo Fitzpatrick:</strong> III</li>
+                    <li><strong class="text-editorialDark font-medium">Motivo de consulta:</strong> Envejecimiento periorbitario acelerado, laxitud del párpado inferior y pigmentación mixta.</li>
+                    <li><strong class="text-editorialDark font-medium">Antecedentes:</strong> Sin alergias conocidas al pescado. Fumadora leve ocasional.</li>
+                </ul>
+            </div>
+
+            <!-- Columna 2: Fármacos y Dispositivos Empleados -->
+            <div class="bg-warmcard p-5 rounded-2xl border border-warmBorder">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-editorialDark mb-4 flex items-center gap-2">
+                    <svg class="w-4 h-4 text-editorialTerracotta" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+                    Dispositivo y Principio Activo
+                </h3>
+                <ul class="text-xs space-y-2.5 text-neutral-600 font-light">
+                    <li><strong class="text-editorialDark font-medium">Fórmula:</strong> Polinucleótidos PDRN 20 mg/ml + Ácido Hialurónico libre no reticulado 5 mg/ml.</li>
+                    <li><strong class="text-editorialDark font-medium">Volumen inyectado:</strong> 1.0 ml por órbita (total 2.0 ml por sesión).</li>
+                    <li><strong class="text-editorialDark font-medium">Técnica:</strong> Microinyecciones intradérmicas espaciadas cada 3-4 mm.</li>
+                    <li><strong class="text-editorialDark font-medium">Tiempo de inactividad:</strong> Eritema y pápulas transitorias resueltas a las 36 horas.</li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Resultados Cuantitativos -->
+            <div class="bg-warmcard p-5 rounded-2xl border border-warmBorder">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-editorialDark mb-4 flex items-center gap-2">
+                    <svg class="w-4 h-4 text-medicalGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                    Métricas a los 60 Días
+                </h3>
+                <div class="space-y-3">
+                    <div>
+                        <div class="flex justify-between text-xs mb-1">
+                            <span class="font-medium text-editorialDark">Densidad dérmica por ecografía</span>
+                            <span class="font-mono text-medicalGreen font-bold">+38%</span>
+                        </div>
+                        <div class="w-full bg-warmBorder h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-medicalGreen h-full w-[76%] rounded-full"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-1">
+                            <span class="font-medium text-editorialDark">Índice de hidratación corneal</span>
+                            <span class="font-mono text-medicalGreen font-bold">+44%</span>
+                        </div>
+                        <div class="w-full bg-warmBorder h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-medicalGreen h-full w-[88%] rounded-full"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-1">
+                            <span class="font-medium text-editorialDark">Satisfacción del paciente (Escala GAIS)</span>
+                            <span class="font-mono text-medicalGreen font-bold">5/5 ("Muy mejorada")</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TARJETA DEL DOCTOR TRATANTE -->
+        <div class="p-6 bg-white rounded-2xl border border-warmBorder shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-4">
+                <img src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Dra. Elena Valdés" class="w-16 h-16 rounded-full object-cover border border-warmBorder">
+                <div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-editorialTerracotta">Médico Autor del Caso</span>
+                    <h4 class="font-serif text-lg font-medium text-editorialDark">Dra. Elena Valdés</h4>
+                    <p class="text-xs text-neutral-500 font-light">Especialista en Medicina Estética Regenerativa • Clínica Dream Madrid</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3 w-full sm:w-auto">
+                <a href="chat-medico.html" class="flex-1 sm:flex-none text-center px-4 py-2.5 bg-warmcard hover:bg-neutral-200 text-editorialDark rounded-lg text-xs font-semibold tracking-wider transition border border-warmBorder">
+                    Consultar Dudas del Protocolo
+                </a>
+                <a href="perfil-especialista.html" class="flex-1 sm:flex-none text-center px-4 py-2.5 bg-editorialTerracotta hover:bg-[#a35544] text-white rounded-lg text-xs font-bold uppercase tracking-wider transition">
+                    Agendar Cita
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#141313] text-white py-10 border-t border-white/10 mt-16 text-center text-xs text-neutral-400">
+        <p class="font-serif text-base text-white mb-2">REVISTA DREAM PIEL & SALUD</p>
+        <p class="font-light">Banco Oficial de Evidencia Fotográfica y Casos Clínicos Colegiados.</p>
+    </footer>
+
+    <!-- JS de la aplicación -->
+    <script src="app.js"></script>
+</body>
+</html>
