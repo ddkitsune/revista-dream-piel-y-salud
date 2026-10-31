@@ -15,16 +15,16 @@
             theme: {
                 extend: {
                     colors: {
-                        brandSurface: '#f8fafd',
+                        brandSurface: '#F8FAFC',
                         brandSurfaceLow: '#ffffff',
-                        brandSurfaceTint: '#edf3f8',
-                        brandAccent: '#1e4b75',
-                        brandAccentLight: '#356d9c',
-                        brandAccentHover: '#143553',
-                        brandDark: '#111c2a',
-                        textMuted: '#586c82',
-                        brandBorder: '#dbe5ee',
-                        statusSuccess: '#1f8a65'
+                        brandSurfaceTint: '#EBF8FF',
+                        brandAccent: '#0077B6',
+                        brandAccentLight: '#00B4D8',
+                        brandAccentHover: '#005F92',
+                        brandDark: '#0B1325',
+                        textMuted: '#5A6B82',
+                        brandBorder: '#E2E8F0',
+                        statusSuccess: '#059669'
                     },
                     fontFamily: {
                         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
@@ -36,18 +36,18 @@
     </script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-[#0b131d] text-white font-sans antialiased h-screen flex flex-col overflow-hidden">
+<body class="bg-[#0B1325] text-white font-sans antialiased h-screen flex flex-col overflow-hidden">
 
     <!-- CABECERA DE LA SALA VIRTUAL -->
-    <header class="bg-[#111c2a] border-b border-white/10 px-4 sm:px-6 py-3 flex items-center justify-between shrink-0 z-30">
+    <header class="bg-[#0B1325] border-b border-white/10 px-4 sm:px-6 py-3 flex items-center justify-between shrink-0 z-30">
         <div class="flex items-center gap-3">
             <a href="expediente-paciente.html" class="p-2 text-neutral-400 hover:text-white transition" title="Salir de la sala">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
             </a>
             <div class="flex items-center gap-2">
                 <span class="font-bold text-xl text-white tracking-tight">dream</span>
-                <div class="w-5 h-5 rounded-full border-2 border-transparent border-r-[#356d9c] border-t-white rotate-[25deg]"></div>
-                <span class="text-xs uppercase font-bold tracking-widest text-[#93bbeb] ml-1">Telemedicina Quirúrgica HD</span>
+                <div class="w-5 h-5 rounded-full border-2 border-transparent border-r-[#00B4D8] border-t-white rotate-[25deg]"></div>
+                <span class="text-xs uppercase font-bold tracking-widest text-[#00B4D8] ml-1">Telemedicina Quirúrgica HD</span>
             </div>
             <span class="text-neutral-500 hidden sm:inline">|</span>
             <span class="hidden sm:inline-flex items-center gap-1.5 text-[11px] text-emerald-400 font-mono">
@@ -107,14 +107,14 @@
             </div>
 
             <!-- BARRA INFERIOR FLOTANTE DE CONTROLES SANITARIOS -->
-            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 bg-[#111c2a]/90 backdrop-blur-md border border-white/20 rounded-2xl px-6 py-3 flex items-center gap-4 shadow-2xl z-20">
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 bg-[#0B1325]/90 backdrop-blur-md border border-white/20 rounded-2xl px-6 py-3 flex items-center gap-4 shadow-2xl z-20">
                 <button onclick="toggleControl(this, 'Micrófono')" class="p-3 bg-white/10 hover:bg-white/20 text-white rounded-xl transition" title="Silenciar micrófono">
                     <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
                 </button>
                 <button onclick="toggleControl(this, 'Cámara')" class="p-3 bg-white/10 hover:bg-white/20 text-white rounded-xl transition" title="Apagar cámara">
                     <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
                 </button>
-                <button onclick="showNotification('Puntero dermatológico activado para diagnóstico')" class="p-3 bg-[#1e4b75] hover:bg-[#356d9c] text-white rounded-xl transition flex items-center gap-2 text-xs font-bold uppercase tracking-wider">
+                <button onclick="showNotification('Puntero dermatológico activado para diagnóstico')" class="p-3 bg-[#0077B6] hover:bg-[#00B4D8] text-white rounded-xl transition flex items-center gap-2 text-xs font-bold uppercase tracking-wider">
                     <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/></svg>
                     Puntero Dérmico
                 </button>
@@ -126,7 +126,7 @@
         </div>
 
         <!-- PANEL LATERAL CLÍNICO: CHAT + RECETA ELECTRÓNICA EN VIVO (DERECHA 340px) -->
-        <aside class="w-80 sm:w-96 bg-[#111c2a] border-l border-white/10 flex flex-col justify-between shrink-0">
+        <aside class="w-80 sm:w-96 bg-[#0B1325] border-l border-white/10 flex flex-col justify-between shrink-0">
             
             <!-- HEADER PANEL -->
             <div class="p-4 border-b border-white/10 flex items-center justify-between">
@@ -140,7 +140,7 @@
                     <strong class="text-emerald-400 text-[11px] block mb-1">Dra. Marcela Cadavid</strong>
                     He marcado la zona del pómulo izquierdo en la pantalla para que notes el borde activo de la descamación.
                 </div>
-                <div class="bg-[#1e4b75]/30 p-3 rounded-xl border border-[#356d9c]/30 text-white ml-4">
+                <div class="bg-[#0077B6]/30 p-3 rounded-xl border border-[#00B4D8]/30 text-white ml-4">
                     <strong class="text-neutral-300 text-[11px] block mb-1">Carla Gómez</strong>
                     Sí, doctora, lo veo claramente con el puntero verde.
                 </div>
@@ -149,7 +149,7 @@
             <!-- MÓDULO EMISIÓN DE RECETA EN VIVO -->
             <div class="p-4 bg-white/5 border-t border-white/10 space-y-3">
                 <div class="flex items-center justify-between text-xs">
-                    <span class="font-bold uppercase tracking-wider text-[#93bbeb] flex items-center gap-1.5">
+                    <span class="font-bold uppercase tracking-wider text-[#00B4D8] flex items-center gap-1.5">
                         <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         Prescripción Oficial #RX-9921
                     </span>
@@ -157,7 +157,7 @@
                 </div>
                 <p class="text-[11px] text-neutral-300">Emulsión Barrera Calmante con Ceramidas y Centella Asiática 50ml.</p>
                 <div class="flex gap-2">
-                    <button onclick="showNotification('Receta vinculada a tu expediente. Lista para canjear en farmacia.')" class="flex-1 py-2 bg-[#1e4b75] hover:bg-[#356d9c] text-white text-[11px] font-bold uppercase rounded-lg transition text-center">
+                    <button onclick="showNotification('Receta vinculada a tu expediente. Lista para canjear en farmacia.')" class="flex-1 py-2 bg-[#0077B6] hover:bg-[#00B4D8] text-white text-[11px] font-bold uppercase rounded-lg transition text-center">
                         Canjear en Farmacia
                     </button>
                     <a href="expediente-paciente.html" class="px-3 py-2 bg-white/10 hover:bg-white/20 text-white text-[11px] font-semibold rounded-lg transition text-center">

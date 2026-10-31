@@ -81,8 +81,8 @@ function updateCartQty(productId, delta) {
 // 3. Mini-notificación toast editorial
 function showNotification(msg) {
     const toast = document.createElement('div');
-    toast.className = 'fixed bottom-6 right-6 z-50 bg-[#141313] text-white px-5 py-3 rounded-lg shadow-xl text-xs font-medium tracking-wide flex items-center gap-3 transition-all duration-300 transform translate-y-4 opacity-0 border border-[#ede7e5]/20';
-    toast.innerHTML = `<span class="w-2 h-2 rounded-full bg-[#b86553]"></span><span>${msg}</span>`;
+    toast.className = 'fixed bottom-6 right-6 z-50 bg-[#0B1325] text-white px-5 py-3 rounded-lg shadow-xl text-xs font-medium tracking-wide flex items-center gap-3 transition-all duration-300 transform translate-y-4 opacity-0 border border-[#E2E8F0]/20';
+    toast.innerHTML = `<span class="w-2 h-2 rounded-full bg-[#0077B6]"></span><span>${msg}</span>`;
     document.body.appendChild(toast);
     requestAnimationFrame(() => {
         toast.classList.remove('translate-y-4', 'opacity-0');
@@ -139,8 +139,8 @@ function initTabs() {
         triggers.forEach(trigger => {
             trigger.addEventListener('click', () => {
                 const target = trigger.getAttribute('data-tab-trigger');
-                triggers.forEach(t => t.classList.remove('active', 'border-[#b86553]', 'text-[#b86553]', 'bg-[#b86553]', 'text-white'));
-                trigger.classList.add('active', 'border-[#b86553]', 'text-[#b86553]');
+                triggers.forEach(t => t.classList.remove('active', 'border-[#0077B6]', 'text-[#0077B6]', 'bg-[#0077B6]', 'text-white'));
+                trigger.classList.add('active', 'border-[#0077B6]', 'text-[#0077B6]');
                 
                 const contents = group.querySelectorAll('[data-tab-content]');
                 contents.forEach(c => {

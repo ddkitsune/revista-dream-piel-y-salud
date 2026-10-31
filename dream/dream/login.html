@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="h-full bg-[#fcf9f8] text-[#1c1b1b]">
+<html lang="es" class="h-full bg-[#FFFFFF] text-[#0B1325]">
 
 <head>
     <meta charset="UTF-8">
@@ -15,18 +15,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Configuración de Tailwind CSS -->
-    <script> tailwind.config = { theme: { extend: { fontFamily: { serif: ['"Lora"', 'serif'], sans: ['"Inter"', 'sans-serif'], }, colors: { brand: { accent: '#b86553', accentHover: '#a35544', surface: '#fcf9f8', surfaceLow: '#f7f3f2', surfaceHigh: '#ede7e5', dark: '#141313', } } } } } </script>
+    <script> tailwind.config = { theme: { extend: { fontFamily: { serif: ['"Lora"', 'serif'], sans: ['"Inter"', 'sans-serif'], }, colors: { brand: { accent: '#0077B6', accentHover: '#005F92', surface: '#FFFFFF', surfaceLow: '#F8FAFC', surfaceHigh: '#E2E8F0', dark: '#0B1325', } } } } } </script>
     
     <!-- Hoja de estilos externa -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="min-h-full font-sans antialiased bg-[#fcf9f8] text-[#1c1b1b] flex justify-center pb-24 md:pb-0">
+<body class="min-h-full font-sans antialiased bg-[#FFFFFF] text-[#0B1325] flex justify-center pb-24 md:pb-0">
     <!-- Contenedor Principal (Responsivo: móvil y escritorio) -->
-    <div class="w-full md:max-w-7xl min-h-screen bg-[#fcf9f8] md:shadow-none shadow-2xl relative flex flex-col md:border-none border-x border-[#ede7e5] mx-auto">
+    <div class="w-full md:max-w-7xl min-h-screen bg-[#FFFFFF] md:shadow-none shadow-2xl relative flex flex-col md:border-none border-x border-[#E2E8F0] mx-auto">
         
         <!-- ==================== ENCABEZADO / BARRA DE NAVEGACIÓN ==================== -->
-        <header class="sticky top-0 z-40 bg-[#fcf9f8]/95 backdrop-blur-md border-b border-[#ece6e4] transition-all">
+        <header class="sticky top-0 z-40 bg-[#FFFFFF]/95 backdrop-blur-md border-b border-[#E2E8F0] transition-all">
             <div class="px-4 lg:px-8 py-3 lg:py-5 flex flex-col items-center">
                 
                 <!-- Fila Superior -->
@@ -46,7 +46,7 @@
                     
                     <!-- Centro: Logotipo -->
                     <div class="flex justify-center w-1/3 text-center">
-                        <a href="index.html" class="font-serif text-[15px] sm:text-lg lg:text-2xl font-bold tracking-widest text-[#111] inline-block uppercase whitespace-nowrap">Revista Dream Piel y Salud</a>
+                        <a href="index.html" class="font-serif text-[15px] sm:text-lg lg:text-2xl font-bold tracking-widest text-[#0B1325] inline-block uppercase whitespace-nowrap">Revista Dream Piel y Salud</a>
                     </div>
                     
                     <!-- Derecha: Avatar y Carrito -->
@@ -64,32 +64,32 @@
                             </a>
                             
                             <!-- Menú Desplegable (Mini-Cart) -->
-                            <div class="absolute right-0 mt-2 w-72 bg-white border border-[#ede5e2] rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 flex flex-col">
-                                <div class="p-4 border-b border-[#ede5e2]">
+                            <div class="absolute right-0 mt-2 w-72 bg-white border border-[#E2E8F0] rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 flex flex-col">
+                                <div class="p-4 border-b border-[#E2E8F0]">
                                     <h4 class="font-bold text-neutral-900 text-sm uppercase tracking-wider">Tu Carrito</h4>
                                 </div>
                                 <div class="p-4 flex flex-col gap-4 max-h-64 overflow-y-auto">
                                     <div class="flex gap-3 items-center">
-                                        <img src="https://images.pexels.com/photos/4005041/pexels-photo-4005041.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Producto 1" class="w-10 h-10 rounded object-cover border border-[#ede5e2]">
+                                        <img src="https://images.pexels.com/photos/4005041/pexels-photo-4005041.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Producto 1" class="w-10 h-10 rounded object-cover border border-[#E2E8F0]">
                                         <div class="flex-1">
                                             <p class="text-[11px] font-bold text-neutral-900 leading-tight">Bata Médica Premium</p>
                                             <p class="text-[10px] text-neutral-500">1 x $120.00</p>
                                         </div>
                                     </div>
                                     <div class="flex gap-3 items-center">
-                                        <img src="https://images.pexels.com/photos/3685538/pexels-photo-3685538.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Producto 2" class="w-10 h-10 rounded object-cover border border-[#ede5e2]">
+                                        <img src="https://images.pexels.com/photos/3685538/pexels-photo-3685538.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Producto 2" class="w-10 h-10 rounded object-cover border border-[#E2E8F0]">
                                         <div class="flex-1">
                                             <p class="text-[11px] font-bold text-neutral-900 leading-tight">Serum Ácido Hialurónico</p>
                                             <p class="text-[10px] text-neutral-500">2 x $45.00</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="p-4 border-t border-[#ede5e2] bg-[#fcf9f8] rounded-b-xl">
+                                <div class="p-4 border-t border-[#E2E8F0] bg-[#FFFFFF] rounded-b-xl">
                                     <div class="flex justify-between mb-3 text-sm font-bold text-neutral-900">
                                         <span>Total:</span>
                                         <span>$210.00</span>
                                     </div>
-                                    <a href="carrito.html" class="block w-full py-2.5 bg-[#b86553] hover:bg-[#a35544] text-white text-center text-xs font-bold uppercase tracking-widest rounded transition">
+                                    <a href="carrito.html" class="block w-full py-2.5 bg-[#0077B6] hover:bg-[#005F92] text-white text-center text-xs font-bold uppercase tracking-widest rounded transition">
                                         Ir al Carrito
                                     </a>
                                 </div>
@@ -100,7 +100,7 @@
                 
                 <!-- Fila Inferior: Navegación de Escritorio Simplificada (3 Accesos Clave) -->
                 <nav class="hidden lg:flex items-center justify-center gap-12 xl:gap-16 text-xs xl:text-sm font-semibold tracking-widest uppercase w-full mt-5">
-                    <a href="index.html" class="text-neutral-900 border-b-2 border-[#b86553] pb-1 font-bold whitespace-nowrap">Revista</a>
+                    <a href="index.html" class="text-neutral-900 border-b-2 border-[#0077B6] pb-1 font-bold whitespace-nowrap">Revista</a>
                     <a href="especialistas.html" class="text-neutral-500 hover:text-neutral-900 transition whitespace-nowrap">Directorio Médico</a>
                     <a href="social.html" class="text-neutral-500 hover:text-neutral-900 transition whitespace-nowrap">Social Dream</a>
                 </nav>
@@ -109,7 +109,7 @@
 
         
             <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
-            <main class="flex-1 flex flex-col md:flex-row w-full bg-[#fcf9f8] min-h-[calc(100vh-100px)]">
+            <main class="flex-1 flex flex-col md:flex-row w-full bg-[#FFFFFF] min-h-[calc(100vh-100px)]">
                 
                 <!-- Mitad Izquierda: Imagen Decorativa -->
                 <div class="hidden md:block w-1/2 bg-neutral-900 relative overflow-hidden">
@@ -126,8 +126,8 @@
                     <div class="w-full max-w-md">
                         
                         <!-- Pestañas (Toggle Iniciar Sesión / Crear Cuenta) -->
-                        <div class="flex gap-8 border-b border-[#ede5e2] mb-10">
-                            <button id="tab-login" class="pb-3 text-sm font-bold uppercase tracking-wider text-neutral-900 border-b-2 border-[#b86553] transition">
+                        <div class="flex gap-8 border-b border-[#E2E8F0] mb-10">
+                            <button id="tab-login" class="pb-3 text-sm font-bold uppercase tracking-wider text-neutral-900 border-b-2 border-[#0077B6] transition">
                                 Iniciar Sesión
                             </button>
                             <button id="tab-register" class="pb-3 text-sm font-bold uppercase tracking-wider text-neutral-400 hover:text-neutral-900 transition border-b-2 border-transparent hover:border-neutral-300">
@@ -142,32 +142,32 @@
                             <div id="register-fields" class="flex flex-col md:flex-row gap-6 hidden">
                                 <div class="flex-1">
                                     <label class="block text-[10px] uppercase font-bold tracking-wider text-neutral-500 mb-2">Nombre</label>
-                                    <input type="text" placeholder="Ej. Carlos" class="w-full px-4 py-3.5 bg-white border border-[#ede5e2] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#b86553] transition">
+                                    <input type="text" placeholder="Ej. Carlos" class="w-full px-4 py-3.5 bg-white border border-[#E2E8F0] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#0077B6] transition">
                                 </div>
                                 <div class="flex-1">
                                     <label class="block text-[10px] uppercase font-bold tracking-wider text-neutral-500 mb-2">Apellido</label>
-                                    <input type="text" placeholder="Ej. Mendoza" class="w-full px-4 py-3.5 bg-white border border-[#ede5e2] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#b86553] transition">
+                                    <input type="text" placeholder="Ej. Mendoza" class="w-full px-4 py-3.5 bg-white border border-[#E2E8F0] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#0077B6] transition">
                                 </div>
                             </div>
 
                             <!-- Correo Electrónico -->
                             <div>
                                 <label class="block text-[10px] uppercase font-bold tracking-wider text-neutral-500 mb-2">Correo Electrónico</label>
-                                <input type="email" placeholder="tu@correo.com" class="w-full px-4 py-3.5 bg-white border border-[#ede5e2] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#b86553] transition">
+                                <input type="email" placeholder="tu@correo.com" class="w-full px-4 py-3.5 bg-white border border-[#E2E8F0] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#0077B6] transition">
                             </div>
 
                             <!-- Contraseña -->
                             <div>
                                 <div class="flex items-center justify-between mb-2">
                                     <label class="block text-[10px] uppercase font-bold tracking-wider text-neutral-500">Contraseña</label>
-                                    <a href="#" class="text-[10px] font-semibold text-[#b86553] hover:text-[#9c5344] transition">¿Olvidaste tu contraseña?</a>
+                                    <a href="#" class="text-[10px] font-semibold text-[#0077B6] hover:text-[#005F92] transition">¿Olvidaste tu contraseña?</a>
                                 </div>
-                                <input type="password" placeholder="••••••••" class="w-full px-4 py-3.5 bg-white border border-[#ede5e2] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#b86553] transition">
+                                <input type="password" placeholder="••••••••" class="w-full px-4 py-3.5 bg-white border border-[#E2E8F0] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#0077B6] transition">
                             </div>
                             
                             <!-- Opción para médicos en registro -->
                             <div id="specialist-check" class="hidden items-center gap-3 mt-4">
-                                <input type="checkbox" id="is_doctor" class="w-4 h-4 text-[#b86553] rounded border-[#ede5e2] focus:ring-[#b86553] cursor-pointer">
+                                <input type="checkbox" id="is_doctor" class="w-4 h-4 text-[#0077B6] rounded border-[#E2E8F0] focus:ring-[#0077B6] cursor-pointer">
                                 <label for="is_doctor" class="text-xs text-neutral-600 font-medium cursor-pointer">Soy un médico / especialista</label>
                             </div>
 
@@ -187,7 +187,7 @@
                             const submitBtn = document.getElementById('submit-btn');
 
                             tabLogin.addEventListener('click', () => {
-                                tabLogin.className = "pb-3 text-sm font-bold uppercase tracking-wider text-neutral-900 border-b-2 border-[#b86553] transition";
+                                tabLogin.className = "pb-3 text-sm font-bold uppercase tracking-wider text-neutral-900 border-b-2 border-[#0077B6] transition";
                                 tabRegister.className = "pb-3 text-sm font-bold uppercase tracking-wider text-neutral-400 hover:text-neutral-900 transition border-b-2 border-transparent hover:border-neutral-300";
                                 registerFields.classList.add('hidden');
                                 specialistCheck.classList.add('hidden');
@@ -195,7 +195,7 @@
                             });
 
                             tabRegister.addEventListener('click', () => {
-                                tabRegister.className = "pb-3 text-sm font-bold uppercase tracking-wider text-neutral-900 border-b-2 border-[#b86553] transition";
+                                tabRegister.className = "pb-3 text-sm font-bold uppercase tracking-wider text-neutral-900 border-b-2 border-[#0077B6] transition";
                                 tabLogin.className = "pb-3 text-sm font-bold uppercase tracking-wider text-neutral-400 hover:text-neutral-900 transition border-b-2 border-transparent hover:border-neutral-300";
                                 registerFields.classList.remove('hidden');
                                 specialistCheck.classList.remove('hidden');
@@ -217,7 +217,7 @@
                 </div>
             </main>
                 <!-- PIE DE PÁGINA EDITORIAL -->
-            <footer class="p-6 md:p-12 bg-[#f7f2f0] md:rounded-2xl text-center border-t border-[#ede5e2] md:border-none md:mb-8">
+            <footer class="p-6 md:p-12 bg-[#F8FAFC] md:rounded-2xl text-center border-t border-[#E2E8F0] md:border-none md:mb-8">
                 <span class="font-serif text-lg md:text-xl font-bold tracking-[0.1em] text-neutral-900 block mb-2 uppercase">Revista Dream Piel y Salud</span>
                 
                 <p class="text-[10px] md:text-sm text-neutral-400 font-light leading-relaxed max-w-lg mx-auto mb-6">
@@ -237,10 +237,10 @@
 
         <!-- ==================== BARRA DE NAVEGACIÓN INFERIOR PARA MÓVILES ==================== -->
         <!-- Oculta en pantallas medianas (md:hidden) -->
-        <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-[#fcf9f8]/95 backdrop-blur-md border-t border-[#ede5e2] px-3 py-2 flex items-center justify-around shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
+        <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-[#FFFFFF]/95 backdrop-blur-md border-t border-[#E2E8F0] px-3 py-2 flex items-center justify-around shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
             
             <!-- Pestaña 1: Especialista (Activo) -->
-            <a href="especialistas.html" class="flex flex-col items-center gap-1 text-[#b86553]">
+            <a href="especialistas.html" class="flex flex-col items-center gap-1 text-[#0077B6]">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>

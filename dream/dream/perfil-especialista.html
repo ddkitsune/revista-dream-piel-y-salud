@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="h-full bg-[#fcf9f8] text-[#1c1b1b]">
+<html lang="es" class="h-full bg-[#FFFFFF] text-[#0B1325]">
 
 <head>
     <meta charset="UTF-8">
@@ -15,18 +15,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Configuración de Tailwind CSS -->
-    <script> tailwind.config = { theme: { extend: { fontFamily: { serif: ['"Lora"', 'serif'], sans: ['"Inter"', 'sans-serif'], }, colors: { brand: { accent: '#b86553', accentHover: '#a35544', surface: '#fcf9f8', surfaceLow: '#f7f3f2', surfaceHigh: '#ede7e5', dark: '#141313', } } } } } </script>
+    <script> tailwind.config = { theme: { extend: { fontFamily: { serif: ['"Lora"', 'serif'], sans: ['"Inter"', 'sans-serif'], }, colors: { brand: { accent: '#0077B6', accentHover: '#005F92', surface: '#FFFFFF', surfaceLow: '#F8FAFC', surfaceHigh: '#E2E8F0', dark: '#0B1325', } } } } } </script>
     
     <!-- Hoja de estilos externa -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="min-h-full font-sans antialiased bg-[#fcf9f8] text-[#1c1b1b] flex justify-center pb-24 md:pb-0">
+<body class="min-h-full font-sans antialiased bg-[#FFFFFF] text-[#0B1325] flex justify-center pb-24 md:pb-0">
     <!-- Contenedor Principal (Responsivo: móvil y escritorio) -->
-    <div class="w-full md:max-w-7xl min-h-screen bg-[#fcf9f8] md:shadow-none shadow-2xl relative flex flex-col md:border-none border-x border-[#ede7e5] mx-auto">
+    <div class="w-full md:max-w-7xl min-h-screen bg-[#FFFFFF] md:shadow-none shadow-2xl relative flex flex-col md:border-none border-x border-[#E2E8F0] mx-auto">
         
         <!-- ==================== ENCABEZADO / BARRA DE NAVEGACIÓN ==================== -->
-        <header class="sticky top-0 z-40 bg-[#fcf9f8]/95 backdrop-blur-md border-b border-[#ece6e4] transition-all">
+        <header class="sticky top-0 z-40 bg-[#FFFFFF]/95 backdrop-blur-md border-b border-[#E2E8F0] transition-all">
             <div class="px-4 lg:px-8 py-3 lg:py-5 flex flex-col items-center">
                 
                 <!-- Fila Superior -->
@@ -46,7 +46,7 @@
                     
                     <!-- Centro: Logotipo -->
                     <div class="flex justify-center w-1/3 text-center">
-                        <a href="index.html" class="font-serif text-[15px] sm:text-lg lg:text-2xl font-bold tracking-widest text-[#111] inline-block uppercase whitespace-nowrap">Revista Dream Piel y Salud</a>
+                        <a href="index.html" class="font-serif text-[15px] sm:text-lg lg:text-2xl font-bold tracking-widest text-[#0B1325] inline-block uppercase whitespace-nowrap">Revista Dream Piel y Salud</a>
                     </div>
                     
                     <!-- Derecha: Avatar y Carrito -->
@@ -64,32 +64,32 @@
                             </a>
                             
                             <!-- Menú Desplegable (Mini-Cart) -->
-                            <div class="absolute right-0 mt-2 w-72 bg-white border border-[#ede5e2] rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 flex flex-col">
-                                <div class="p-4 border-b border-[#ede5e2]">
+                            <div class="absolute right-0 mt-2 w-72 bg-white border border-[#E2E8F0] rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 flex flex-col">
+                                <div class="p-4 border-b border-[#E2E8F0]">
                                     <h4 class="font-bold text-neutral-900 text-sm uppercase tracking-wider">Tu Carrito</h4>
                                 </div>
                                 <div class="p-4 flex flex-col gap-4 max-h-64 overflow-y-auto">
                                     <div class="flex gap-3 items-center">
-                                        <img src="https://images.pexels.com/photos/4005041/pexels-photo-4005041.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Producto 1" class="w-10 h-10 rounded object-cover border border-[#ede5e2]">
+                                        <img src="https://images.pexels.com/photos/4005041/pexels-photo-4005041.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Producto 1" class="w-10 h-10 rounded object-cover border border-[#E2E8F0]">
                                         <div class="flex-1">
                                             <p class="text-[11px] font-bold text-neutral-900 leading-tight">Bata Médica Premium</p>
                                             <p class="text-[10px] text-neutral-500">1 x $120.00</p>
                                         </div>
                                     </div>
                                     <div class="flex gap-3 items-center">
-                                        <img src="https://images.pexels.com/photos/3685538/pexels-photo-3685538.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Producto 2" class="w-10 h-10 rounded object-cover border border-[#ede5e2]">
+                                        <img src="https://images.pexels.com/photos/3685538/pexels-photo-3685538.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Producto 2" class="w-10 h-10 rounded object-cover border border-[#E2E8F0]">
                                         <div class="flex-1">
                                             <p class="text-[11px] font-bold text-neutral-900 leading-tight">Serum Ácido Hialurónico</p>
                                             <p class="text-[10px] text-neutral-500">2 x $45.00</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="p-4 border-t border-[#ede5e2] bg-[#fcf9f8] rounded-b-xl">
+                                <div class="p-4 border-t border-[#E2E8F0] bg-[#FFFFFF] rounded-b-xl">
                                     <div class="flex justify-between mb-3 text-sm font-bold text-neutral-900">
                                         <span>Total:</span>
                                         <span>$210.00</span>
                                     </div>
-                                    <a href="carrito.html" class="block w-full py-2.5 bg-[#b86553] hover:bg-[#a35544] text-white text-center text-xs font-bold uppercase tracking-widest rounded transition">
+                                    <a href="carrito.html" class="block w-full py-2.5 bg-[#0077B6] hover:bg-[#005F92] text-white text-center text-xs font-bold uppercase tracking-widest rounded transition">
                                         Ir al Carrito
                                     </a>
                                 </div>
@@ -101,7 +101,7 @@
                 <!-- Fila Inferior: Navegación de Escritorio Simplificada (3 Accesos Clave) -->
                 <nav class="hidden lg:flex items-center justify-center gap-12 xl:gap-16 text-xs xl:text-sm font-semibold tracking-widest uppercase w-full mt-5">
                     <a href="index.html" class="text-neutral-500 hover:text-neutral-900 transition whitespace-nowrap">Revista</a>
-                    <a href="especialistas.html" class="text-neutral-900 border-b-2 border-[#b86553] pb-1 font-bold whitespace-nowrap">Directorio Médico</a>
+                    <a href="especialistas.html" class="text-neutral-900 border-b-2 border-[#0077B6] pb-1 font-bold whitespace-nowrap">Directorio Médico</a>
                     <a href="social.html" class="text-neutral-500 hover:text-neutral-900 transition whitespace-nowrap">Social Dream</a>
                 </nav>
             </div>
@@ -109,10 +109,10 @@
 
         
             <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
-            <main class="flex-1 flex flex-col w-full bg-[#fcf9f8]">
+            <main class="flex-1 flex flex-col w-full bg-[#FFFFFF]">
                 
                 <!-- Encabezado del Perfil -->
-                <section class="bg-white border-b border-[#ede5e2] pb-12 pt-8 px-4">
+                <section class="bg-white border-b border-[#E2E8F0] pb-12 pt-8 px-4">
                     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
                         
                         <!-- Foto del Médico -->
@@ -125,10 +125,10 @@
                             <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
                                 <div>
                                     <h1 class="font-serif text-3xl md:text-4xl text-neutral-900 mb-1">Dr. Alejandro Navarro</h1>
-                                    <p class="text-[#b86553] text-sm md:text-base font-bold uppercase tracking-widest">Cirugía Plástica Facial</p>
+                                    <p class="text-[#0077B6] text-sm md:text-base font-bold uppercase tracking-widest">Cirugía Plástica Facial</p>
                                 </div>
                                 <!-- Calificación de Estrellas -->
-                                <div class="flex items-center justify-center gap-1.5 bg-[#fcf9f8] px-4 py-2 rounded-full border border-[#ede5e2]">
+                                <div class="flex items-center justify-center gap-1.5 bg-[#FFFFFF] px-4 py-2 rounded-full border border-[#E2E8F0]">
                                     <span class="text-xs font-bold text-neutral-900 mr-1">4.9</span>
                                     <!-- 5 Estrellas (4 completas, 1 media) -->
                                     <div class="flex text-amber-400">
@@ -154,11 +154,11 @@
                             
                             <!-- Botones de Acción Rápida -->
                             <div class="flex flex-col sm:flex-row items-center gap-3">
-                                <a href="chat-medico.html" class="w-full sm:w-auto px-8 py-3 bg-[#b86553] hover:bg-[#a35544] text-white text-xs font-bold uppercase tracking-widest rounded transition shadow-md text-center">
+                                <a href="chat-medico.html" class="w-full sm:w-auto px-8 py-3 bg-[#0077B6] hover:bg-[#005F92] text-white text-xs font-bold uppercase tracking-widest rounded transition shadow-md text-center">
                                     Agendar Cita Médica
                                 </a>
-                                <a href="chat-medico.html" class="w-full sm:w-auto px-8 py-3 bg-white hover:bg-neutral-50 text-neutral-900 border border-[#ede5e2] text-xs font-bold uppercase tracking-widest rounded transition flex items-center justify-center gap-2 text-center">
-                                    <svg class="w-4 h-4 text-[#b86553]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                                <a href="chat-medico.html" class="w-full sm:w-auto px-8 py-3 bg-white hover:bg-neutral-50 text-neutral-900 border border-[#E2E8F0] text-xs font-bold uppercase tracking-widest rounded transition flex items-center justify-center gap-2 text-center">
+                                    <svg class="w-4 h-4 text-[#0077B6]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
                                     Consulta Privada Online Cifrada
                                 </a>
                             </div>
@@ -173,12 +173,12 @@
                     <div class="flex-1">
                         
                         <!-- Video de Presentación -->
-                        <h2 class="text-lg font-serif text-neutral-900 mb-6 border-b border-[#ede5e2] pb-3">Video de Presentación</h2>
-                        <div class="relative w-full rounded-xl overflow-hidden shadow-lg border border-[#ede5e2] bg-neutral-900 aspect-video mb-10 group cursor-pointer">
+                        <h2 class="text-lg font-serif text-neutral-900 mb-6 border-b border-[#E2E8F0] pb-3">Video de Presentación</h2>
+                        <div class="relative w-full rounded-xl overflow-hidden shadow-lg border border-[#E2E8F0] bg-neutral-900 aspect-video mb-10 group cursor-pointer">
                             <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Video cover" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition duration-700">
                             <!-- Botón Play -->
                             <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/40 group-hover:bg-[#b86553] group-hover:border-[#b86553] transition duration-300">
+                                <div class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/40 group-hover:bg-[#0077B6] group-hover:border-[#0077B6] transition duration-300">
                                     <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
                                 </div>
                             </div>
@@ -188,21 +188,21 @@
                         </div>
 
                         <!-- Trayectoria -->
-                        <h2 class="text-lg font-serif text-neutral-900 mb-6 border-b border-[#ede5e2] pb-3">Formación y Trayectoria</h2>
+                        <h2 class="text-lg font-serif text-neutral-900 mb-6 border-b border-[#E2E8F0] pb-3">Formación y Trayectoria</h2>
                         <div class="space-y-6 text-sm text-neutral-600 font-light leading-relaxed">
                             <p>El Dr. Navarro se ha dedicado durante más de 15 años a perfeccionar técnicas quirúrgicas mínimamente invasivas enfocadas en preservar la naturalidad del rostro. Su filosofía radica en la "restauración armónica" en lugar de la alteración drástica.</p>
                             
                             <ul class="space-y-3 pt-2">
                                 <li class="flex items-start gap-3">
-                                    <svg class="w-5 h-5 text-[#b86553] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    <svg class="w-5 h-5 text-[#0077B6] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                                     <span><strong>Título en Cirugía General:</strong> Universidad Complutense de Madrid (2008).</span>
                                 </li>
                                 <li class="flex items-start gap-3">
-                                    <svg class="w-5 h-5 text-[#b86553] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                                    <svg class="w-5 h-5 text-[#0077B6] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                                     <span><strong>Especialidad en Cirugía Plástica, Estética y Reparadora.</strong></span>
                                 </li>
                                 <li class="flex items-start gap-3">
-                                    <svg class="w-5 h-5 text-[#b86553] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                    <svg class="w-5 h-5 text-[#0077B6] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                                     <span>Miembro Titular de la Sociedad Internacional de Cirugía Plástica Estética (ISAPS).</span>
                                 </li>
                             </ul>
@@ -211,15 +211,15 @@
 
                     <!-- Lado Derecho: Tarjeta de Contacto / Dirección -->
                     <aside class="w-full lg:w-[340px] flex-shrink-0">
-                        <div class="bg-white rounded-xl border border-[#ede5e2] shadow-sm p-6 sticky top-24">
+                        <div class="bg-white rounded-xl border border-[#E2E8F0] shadow-sm p-6 sticky top-24">
                             
-                            <h3 class="text-sm font-bold uppercase tracking-widest text-neutral-900 mb-6 pb-2 border-b border-[#ede5e2]">Consultorio Médico</h3>
+                            <h3 class="text-sm font-bold uppercase tracking-widest text-neutral-900 mb-6 pb-2 border-b border-[#E2E8F0]">Consultorio Médico</h3>
                             
                             <!-- Mapa Simulado -->
-                            <div class="w-full h-40 bg-neutral-100 rounded-lg mb-6 overflow-hidden relative border border-[#ede5e2]">
+                            <div class="w-full h-40 bg-neutral-100 rounded-lg mb-6 overflow-hidden relative border border-[#E2E8F0]">
                                 <img src="https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mapa" class="w-full h-full object-cover opacity-30 grayscale">
                                 <div class="absolute inset-0 flex items-center justify-center">
-                                    <svg class="w-8 h-8 text-[#b86553]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>
+                                    <svg class="w-8 h-8 text-[#0077B6]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>
                                 </div>
                             </div>
 
@@ -232,7 +232,7 @@
                                         <p class="text-xs">Av. Las Palmas 1450, Piso 4, Consultorio 402, Zona Médica, Ciudad Capital.</p>
                                     </div>
                                 </div>
-                                <hr class="border-[#ede5e2]">
+                                <hr class="border-[#E2E8F0]">
                                 <div class="flex items-center gap-3">
                                     <svg class="w-5 h-5 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                     <div>
@@ -240,7 +240,7 @@
                                         <p class="text-xs">Lunes a Viernes: 09:00 - 18:00</p>
                                     </div>
                                 </div>
-                                <hr class="border-[#ede5e2]">
+                                <hr class="border-[#E2E8F0]">
                                 <div class="flex items-center gap-3">
                                     <svg class="w-5 h-5 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                                     <div>
@@ -255,7 +255,7 @@
                 </section>
             </main>
                 <!-- PIE DE PÁGINA EDITORIAL -->
-            <footer class="p-6 md:p-12 bg-[#f7f2f0] md:rounded-2xl text-center border-t border-[#ede5e2] md:border-none md:mb-8">
+            <footer class="p-6 md:p-12 bg-[#F8FAFC] md:rounded-2xl text-center border-t border-[#E2E8F0] md:border-none md:mb-8">
                 <span class="font-serif text-lg md:text-xl font-bold tracking-[0.1em] text-neutral-900 block mb-2 uppercase">Revista Dream Piel y Salud</span>
                 
                 <p class="text-[10px] md:text-sm text-neutral-400 font-light leading-relaxed max-w-lg mx-auto mb-6">
@@ -275,10 +275,10 @@
 
         <!-- ==================== BARRA DE NAVEGACIÓN INFERIOR PARA MÓVILES ==================== -->
         <!-- Oculta en pantallas medianas (md:hidden) -->
-        <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-[#fcf9f8]/95 backdrop-blur-md border-t border-[#ede5e2] px-3 py-2 flex items-center justify-around shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
+        <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-[#FFFFFF]/95 backdrop-blur-md border-t border-[#E2E8F0] px-3 py-2 flex items-center justify-around shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
             
             <!-- Pestaña 1: Especialista (Activo) -->
-            <a href="especialistas.html" class="flex flex-col items-center gap-1 text-[#b86553]">
+            <a href="especialistas.html" class="flex flex-col items-center gap-1 text-[#0077B6]">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>

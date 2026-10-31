@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="h-full bg-[#fcf9f8] text-[#1c1b1b]">
+<html lang="es" class="h-full bg-[#FFFFFF] text-[#0B1325]">
 
 <head>
     <meta charset="UTF-8">
@@ -15,18 +15,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Configuración de Tailwind CSS -->
-    <script> tailwind.config = { theme: { extend: { fontFamily: { serif: ['"Lora"', 'serif'], sans: ['"Inter"', 'sans-serif'], }, colors: { brand: { accent: '#b86553', accentHover: '#a35544', surface: '#fcf9f8', surfaceLow: '#f7f3f2', surfaceHigh: '#ede7e5', dark: '#141313', } } } } } </script>
+    <script> tailwind.config = { theme: { extend: { fontFamily: { serif: ['"Lora"', 'serif'], sans: ['"Inter"', 'sans-serif'], }, colors: { brand: { accent: '#0077B6', accentHover: '#005F92', surface: '#FFFFFF', surfaceLow: '#F8FAFC', surfaceHigh: '#E2E8F0', dark: '#0B1325', } } } } } </script>
     
     <!-- Hoja de estilos externa -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="min-h-full font-sans antialiased bg-[#fcf9f8] text-[#1c1b1b] flex justify-center pb-24 md:pb-0">
+<body class="min-h-full font-sans antialiased bg-[#FFFFFF] text-[#0B1325] flex justify-center pb-24 md:pb-0">
     <!-- Contenedor Principal (Responsivo: móvil y escritorio) -->
-    <div class="w-full md:max-w-7xl min-h-screen bg-[#fcf9f8] md:shadow-none shadow-2xl relative flex flex-col md:border-none border-x border-[#ede7e5] mx-auto">
+    <div class="w-full md:max-w-7xl min-h-screen bg-[#FFFFFF] md:shadow-none shadow-2xl relative flex flex-col md:border-none border-x border-[#E2E8F0] mx-auto">
         
         <!-- ==================== ENCABEZADO / BARRA DE NAVEGACIÓN ==================== -->
-        <header class="sticky top-0 z-40 bg-[#fcf9f8]/95 backdrop-blur-md border-b border-[#ece6e4] transition-all">
+        <header class="sticky top-0 z-40 bg-[#FFFFFF]/95 backdrop-blur-md border-b border-[#E2E8F0] transition-all">
             <div class="px-4 lg:px-8 py-3 lg:py-5 flex flex-col items-center">
                 
                 <!-- Fila Superior -->
@@ -46,7 +46,7 @@
                     
                     <!-- Centro: Logotipo -->
                     <div class="flex justify-center w-1/3 text-center">
-                        <a href="index.html" class="font-serif text-[15px] sm:text-lg lg:text-2xl font-bold tracking-widest text-[#111] inline-block uppercase whitespace-nowrap">Revista Dream Piel y Salud</a>
+                        <a href="index.html" class="font-serif text-[15px] sm:text-lg lg:text-2xl font-bold tracking-widest text-[#0B1325] inline-block uppercase whitespace-nowrap">Revista Dream Piel y Salud</a>
                     </div>
                     
                     <!-- Derecha: Avatar y Carrito -->
@@ -64,32 +64,32 @@
                             </a>
                             
                             <!-- Menú Desplegable (Mini-Cart) -->
-                            <div class="absolute right-0 mt-2 w-72 bg-white border border-[#ede5e2] rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 flex flex-col">
-                                <div class="p-4 border-b border-[#ede5e2]">
+                            <div class="absolute right-0 mt-2 w-72 bg-white border border-[#E2E8F0] rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 flex flex-col">
+                                <div class="p-4 border-b border-[#E2E8F0]">
                                     <h4 class="font-bold text-neutral-900 text-sm uppercase tracking-wider">Tu Carrito</h4>
                                 </div>
                                 <div class="p-4 flex flex-col gap-4 max-h-64 overflow-y-auto">
                                     <div class="flex gap-3 items-center">
-                                        <img src="https://images.pexels.com/photos/4005041/pexels-photo-4005041.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Producto 1" class="w-10 h-10 rounded object-cover border border-[#ede5e2]">
+                                        <img src="https://images.pexels.com/photos/4005041/pexels-photo-4005041.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Producto 1" class="w-10 h-10 rounded object-cover border border-[#E2E8F0]">
                                         <div class="flex-1">
                                             <p class="text-[11px] font-bold text-neutral-900 leading-tight">Bata Médica Premium</p>
                                             <p class="text-[10px] text-neutral-500">1 x $120.00</p>
                                         </div>
                                     </div>
                                     <div class="flex gap-3 items-center">
-                                        <img src="https://images.pexels.com/photos/3685538/pexels-photo-3685538.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Producto 2" class="w-10 h-10 rounded object-cover border border-[#ede5e2]">
+                                        <img src="https://images.pexels.com/photos/3685538/pexels-photo-3685538.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Producto 2" class="w-10 h-10 rounded object-cover border border-[#E2E8F0]">
                                         <div class="flex-1">
                                             <p class="text-[11px] font-bold text-neutral-900 leading-tight">Serum Ácido Hialurónico</p>
                                             <p class="text-[10px] text-neutral-500">2 x $45.00</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="p-4 border-t border-[#ede5e2] bg-[#fcf9f8] rounded-b-xl">
+                                <div class="p-4 border-t border-[#E2E8F0] bg-[#FFFFFF] rounded-b-xl">
                                     <div class="flex justify-between mb-3 text-sm font-bold text-neutral-900">
                                         <span>Total:</span>
                                         <span>$210.00</span>
                                     </div>
-                                    <a href="carrito.html" class="block w-full py-2.5 bg-[#b86553] hover:bg-[#a35544] text-white text-center text-xs font-bold uppercase tracking-widest rounded transition">
+                                    <a href="carrito.html" class="block w-full py-2.5 bg-[#0077B6] hover:bg-[#005F92] text-white text-center text-xs font-bold uppercase tracking-widest rounded transition">
                                         Ir al Carrito
                                     </a>
                                 </div>
@@ -100,7 +100,7 @@
                 
                 <!-- Fila Inferior: Navegación de Escritorio Simplificada (3 Accesos Clave) -->
                 <nav class="hidden lg:flex items-center justify-center gap-12 xl:gap-16 text-xs xl:text-sm font-semibold tracking-widest uppercase w-full mt-5">
-                    <a href="index.html" class="text-neutral-900 border-b-2 border-[#b86553] pb-1 font-bold whitespace-nowrap">Revista</a>
+                    <a href="index.html" class="text-neutral-900 border-b-2 border-[#0077B6] pb-1 font-bold whitespace-nowrap">Revista</a>
                     <a href="especialistas.html" class="text-neutral-500 hover:text-neutral-900 transition whitespace-nowrap">Directorio Médico</a>
                     <a href="social.html" class="text-neutral-500 hover:text-neutral-900 transition whitespace-nowrap">Social Dream</a>
                 </nav>
@@ -109,20 +109,20 @@
 
         
             <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
-            <main class="flex-1 flex flex-col w-full bg-[#fcf9f8] px-4 py-12 md:py-16">
+            <main class="flex-1 flex flex-col w-full bg-[#FFFFFF] px-4 py-12 md:py-16">
                 
                 <div class="max-w-6xl mx-auto w-full">
                     
-                    <h1 class="font-serif text-3xl md:text-4xl text-neutral-900 mb-8 border-b border-[#ede5e2] pb-4">Tu Carrito de Compras</h1>
+                    <h1 class="font-serif text-3xl md:text-4xl text-neutral-900 mb-8 border-b border-[#E2E8F0] pb-4">Tu Carrito de Compras</h1>
 
                     <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
                         
                         <!-- Lista de Productos en el Carrito -->
                         <div class="flex-1">
-                            <div class="bg-white rounded-xl border border-[#ede5e2] overflow-hidden">
+                            <div class="bg-white rounded-xl border border-[#E2E8F0] overflow-hidden">
                                 
                                 <!-- Encabezado Tabla -->
-                                <div class="hidden md:grid grid-cols-12 gap-4 p-4 border-b border-[#ede5e2] bg-[#fcf9f8] text-xs font-bold uppercase tracking-widest text-neutral-500">
+                                <div class="hidden md:grid grid-cols-12 gap-4 p-4 border-b border-[#E2E8F0] bg-[#FFFFFF] text-xs font-bold uppercase tracking-widest text-neutral-500">
                                     <div class="col-span-6">Producto</div>
                                     <div class="col-span-2 text-center">Precio</div>
                                     <div class="col-span-2 text-center">Cantidad</div>
@@ -130,14 +130,14 @@
                                 </div>
 
                                 <!-- Item 1 -->
-                                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 border-b border-[#ede5e2] items-center relative">
+                                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 border-b border-[#E2E8F0] items-center relative">
                                     <!-- Botón Eliminar Móvil -->
                                     <button class="md:hidden absolute top-4 right-4 text-neutral-400 hover:text-red-500 transition">
                                         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
                                     </button>
                                     
                                     <div class="col-span-6 flex gap-4 items-center">
-                                        <img src="https://images.pexels.com/photos/4005041/pexels-photo-4005041.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Bata Médica Premium" class="w-20 h-20 md:w-24 md:h-24 rounded-lg object-cover border border-[#ede5e2]">
+                                        <img src="https://images.pexels.com/photos/4005041/pexels-photo-4005041.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Bata Médica Premium" class="w-20 h-20 md:w-24 md:h-24 rounded-lg object-cover border border-[#E2E8F0]">
                                         <div>
                                             <p class="text-[9px] uppercase tracking-widest font-bold text-neutral-400 mb-1">Moda Clínica</p>
                                             <h3 class="text-sm md:text-base font-semibold text-neutral-900">Bata Médica Premium</h3>
@@ -148,7 +148,7 @@
                                         <span class="text-sm font-bold text-neutral-900">$120.00</span>
                                     </div>
                                     <div class="col-span-2 flex justify-center">
-                                        <div class="flex items-center border border-[#ede5e2] rounded">
+                                        <div class="flex items-center border border-[#E2E8F0] rounded">
                                             <button class="px-2 py-1 text-neutral-500 hover:bg-neutral-50 transition">-</button>
                                             <input type="text" value="1" class="w-8 text-center text-xs font-bold bg-transparent focus:outline-none" readonly>
                                             <button class="px-2 py-1 text-neutral-500 hover:bg-neutral-50 transition">+</button>
@@ -156,7 +156,7 @@
                                     </div>
                                     <div class="col-span-2 flex items-center justify-between md:justify-end">
                                         <span class="md:hidden text-xs font-bold text-neutral-500 uppercase">Subtotal:</span>
-                                        <span class="text-sm font-bold text-[#b86553]">$120.00</span>
+                                        <span class="text-sm font-bold text-[#0077B6]">$120.00</span>
                                         <button class="hidden md:block ml-4 text-neutral-400 hover:text-red-500 transition" aria-label="Eliminar producto">
                                             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
                                         </button>
@@ -171,7 +171,7 @@
                                     </button>
                                     
                                     <div class="col-span-6 flex gap-4 items-center">
-                                        <img src="https://images.pexels.com/photos/3685538/pexels-photo-3685538.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Serum Ácido Hialurónico" class="w-20 h-20 md:w-24 md:h-24 rounded-lg object-cover border border-[#ede5e2]">
+                                        <img src="https://images.pexels.com/photos/3685538/pexels-photo-3685538.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Serum Ácido Hialurónico" class="w-20 h-20 md:w-24 md:h-24 rounded-lg object-cover border border-[#E2E8F0]">
                                         <div>
                                             <p class="text-[9px] uppercase tracking-widest font-bold text-neutral-400 mb-1">Skincare</p>
                                             <h3 class="text-sm md:text-base font-semibold text-neutral-900">Serum Ácido Hialurónico</h3>
@@ -182,7 +182,7 @@
                                         <span class="text-sm font-bold text-neutral-900">$45.00</span>
                                     </div>
                                     <div class="col-span-2 flex justify-center">
-                                        <div class="flex items-center border border-[#ede5e2] rounded">
+                                        <div class="flex items-center border border-[#E2E8F0] rounded">
                                             <button class="px-2 py-1 text-neutral-500 hover:bg-neutral-50 transition">-</button>
                                             <input type="text" value="2" class="w-8 text-center text-xs font-bold bg-transparent focus:outline-none" readonly>
                                             <button class="px-2 py-1 text-neutral-500 hover:bg-neutral-50 transition">+</button>
@@ -190,7 +190,7 @@
                                     </div>
                                     <div class="col-span-2 flex items-center justify-between md:justify-end">
                                         <span class="md:hidden text-xs font-bold text-neutral-500 uppercase">Subtotal:</span>
-                                        <span class="text-sm font-bold text-[#b86553]">$90.00</span>
+                                        <span class="text-sm font-bold text-[#0077B6]">$90.00</span>
                                         <button class="hidden md:block ml-4 text-neutral-400 hover:text-red-500 transition" aria-label="Eliminar producto">
                                             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
                                         </button>
@@ -209,8 +209,8 @@
 
                         <!-- Resumen del Pedido (Aside) -->
                         <aside class="w-full lg:w-80 flex-shrink-0">
-                            <div class="bg-white rounded-xl border border-[#ede5e2] shadow-sm p-6 sticky top-24">
-                                <h3 class="text-lg font-serif text-neutral-900 mb-6 border-b border-[#ede5e2] pb-3">Resumen de Compra</h3>
+                            <div class="bg-white rounded-xl border border-[#E2E8F0] shadow-sm p-6 sticky top-24">
+                                <h3 class="text-lg font-serif text-neutral-900 mb-6 border-b border-[#E2E8F0] pb-3">Resumen de Compra</h3>
                                 
                                 <div class="space-y-4 mb-6 text-sm">
                                     <div class="flex justify-between text-neutral-600">
@@ -227,10 +227,10 @@
                                     </div>
                                 </div>
 
-                                <div class="border-t border-[#ede5e2] pt-4 mb-8">
+                                <div class="border-t border-[#E2E8F0] pt-4 mb-8">
                                     <div class="flex justify-between items-center">
                                         <span class="text-base font-bold text-neutral-900">Total</span>
-                                        <span class="text-2xl font-serif font-bold text-[#b86553]">$237.50</span>
+                                        <span class="text-2xl font-serif font-bold text-[#0077B6]">$237.50</span>
                                     </div>
                                 </div>
 
@@ -238,13 +238,13 @@
                                 <!-- Selección de Método de Pago -->
                                 <div class="mb-4">
                                     <label class="block text-[10px] uppercase font-bold tracking-wider text-neutral-500 mb-2">Método de Pago</label>
-                                    <select id="payment-method" class="w-full px-4 py-3 bg-white border border-[#ede5e2] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#b86553] transition cursor-pointer">
+                                    <select id="payment-method" class="w-full px-4 py-3 bg-white border border-[#E2E8F0] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#0077B6] transition cursor-pointer">
                                         <option value="transferencia">Transferencia Bancaria</option>
                                         <option value="pagomovil">Pago Móvil</option>
                                     </select>
                                 </div>
 
-                                <a href="checkout.html" class="block w-full py-4 bg-editorialTerracotta hover:bg-[#a35544] text-white text-xs font-bold uppercase tracking-widest rounded transition shadow-md text-center mb-3">
+                                <a href="checkout.html" class="block w-full py-4 bg-editorialTerracotta hover:bg-[#005F92] text-white text-xs font-bold uppercase tracking-widest rounded transition shadow-md text-center mb-3">
                                     Finalizar Pedido Seguro (Paso 1 de 3) →
                                 </a>
 
@@ -276,7 +276,7 @@
 
                     <!-- Formulario Transferencia Bancaria -->
                     <form id="form-transferencia" class="space-y-4">
-                        <div class="bg-neutral-50 p-4 rounded text-sm text-neutral-600 mb-6 border border-[#ede5e2]">
+                        <div class="bg-neutral-50 p-4 rounded text-sm text-neutral-600 mb-6 border border-[#E2E8F0]">
                             <p class="font-bold text-neutral-900 mb-1">Banco Destino: Banesco</p>
                             <p>Cuenta: 0134-xxxx-xxxx-xxxx</p>
                             <p>A nombre de: Revista Dream Piel y Salud C.A.</p>
@@ -285,21 +285,21 @@
                         
                         <div>
                             <label class="block text-[10px] uppercase font-bold tracking-wider text-neutral-500 mb-1">Banco de Origen</label>
-                            <input type="text" placeholder="Ej. Provincial" class="w-full px-4 py-3 bg-white border border-[#ede5e2] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#b86553] transition">
+                            <input type="text" placeholder="Ej. Provincial" class="w-full px-4 py-3 bg-white border border-[#E2E8F0] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#0077B6] transition">
                         </div>
                         <div>
                             <label class="block text-[10px] uppercase font-bold tracking-wider text-neutral-500 mb-1">Número de Referencia</label>
-                            <input type="text" placeholder="Últimos 6 dígitos" class="w-full px-4 py-3 bg-white border border-[#ede5e2] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#b86553] transition">
+                            <input type="text" placeholder="Últimos 6 dígitos" class="w-full px-4 py-3 bg-white border border-[#E2E8F0] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#0077B6] transition">
                         </div>
                         <div>
                             <label class="block text-[10px] uppercase font-bold tracking-wider text-neutral-500 mb-1">Fecha de Transferencia</label>
-                            <input type="date" class="w-full px-4 py-3 bg-white border border-[#ede5e2] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#b86553] transition">
+                            <input type="date" class="w-full px-4 py-3 bg-white border border-[#E2E8F0] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#0077B6] transition">
                         </div>
                     </form>
 
                     <!-- Formulario Pago Móvil -->
                     <form id="form-pagomovil" class="space-y-4 hidden">
-                        <div class="bg-neutral-50 p-4 rounded text-sm text-neutral-600 mb-6 border border-[#ede5e2]">
+                        <div class="bg-neutral-50 p-4 rounded text-sm text-neutral-600 mb-6 border border-[#E2E8F0]">
                             <p class="font-bold text-neutral-900 mb-1">Datos Pago Móvil:</p>
                             <p>Banco: Banesco (0134)</p>
                             <p>Teléfono: 0414-1234567</p>
@@ -308,7 +308,7 @@
                         
                         <div>
                             <label class="block text-[10px] uppercase font-bold tracking-wider text-neutral-500 mb-1">Banco de Origen</label>
-                            <select class="w-full px-4 py-3 bg-white border border-[#ede5e2] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#b86553] transition">
+                            <select class="w-full px-4 py-3 bg-white border border-[#E2E8F0] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#0077B6] transition">
                                 <option>Seleccione Banco</option>
                                 <option>Mercantil</option>
                                 <option>Banesco</option>
@@ -318,16 +318,16 @@
                         </div>
                         <div>
                             <label class="block text-[10px] uppercase font-bold tracking-wider text-neutral-500 mb-1">Teléfono Emisor</label>
-                            <input type="text" placeholder="04xx-xxxxxxx" class="w-full px-4 py-3 bg-white border border-[#ede5e2] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#b86553] transition">
+                            <input type="text" placeholder="04xx-xxxxxxx" class="w-full px-4 py-3 bg-white border border-[#E2E8F0] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#0077B6] transition">
                         </div>
                         <div>
                             <label class="block text-[10px] uppercase font-bold tracking-wider text-neutral-500 mb-1">Número de Referencia</label>
-                            <input type="text" placeholder="Referencia de pago móvil" class="w-full px-4 py-3 bg-white border border-[#ede5e2] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#b86553] transition">
+                            <input type="text" placeholder="Referencia de pago móvil" class="w-full px-4 py-3 bg-white border border-[#E2E8F0] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#0077B6] transition">
                         </div>
                     </form>
 
                     <!-- Botón Enviar Modal -->
-                    <button type="button" class="w-full py-4 mt-6 bg-[#b86553] hover:bg-[#a55645] text-white text-xs font-bold uppercase tracking-widest rounded transition">
+                    <button type="button" class="w-full py-4 mt-6 bg-[#0077B6] hover:bg-[#005F92] text-white text-xs font-bold uppercase tracking-widest rounded transition">
                         Confirmar Pago
                     </button>
                 </div>
@@ -381,7 +381,7 @@
 
 </main>
                 <!-- PIE DE PÁGINA EDITORIAL -->
-            <footer class="p-6 md:p-12 bg-[#f7f2f0] md:rounded-2xl text-center border-t border-[#ede5e2] md:border-none md:mb-8">
+            <footer class="p-6 md:p-12 bg-[#F8FAFC] md:rounded-2xl text-center border-t border-[#E2E8F0] md:border-none md:mb-8">
                 <span class="font-serif text-lg md:text-xl font-bold tracking-[0.1em] text-neutral-900 block mb-2 uppercase">Revista Dream Piel y Salud</span>
                 
                 <p class="text-[10px] md:text-sm text-neutral-400 font-light leading-relaxed max-w-lg mx-auto mb-6">
@@ -414,7 +414,7 @@
 
                     <!-- Formulario Transferencia Bancaria -->
                     <form id="form-transferencia" class="space-y-4">
-                        <div class="bg-neutral-50 p-4 rounded text-sm text-neutral-600 mb-6 border border-[#ede5e2]">
+                        <div class="bg-neutral-50 p-4 rounded text-sm text-neutral-600 mb-6 border border-[#E2E8F0]">
                             <p class="font-bold text-neutral-900 mb-1">Banco Destino: Banesco</p>
                             <p>Cuenta: 0134-xxxx-xxxx-xxxx</p>
                             <p>A nombre de: Revista Dream Piel y Salud C.A.</p>
@@ -423,21 +423,21 @@
                         
                         <div>
                             <label class="block text-[10px] uppercase font-bold tracking-wider text-neutral-500 mb-1">Banco de Origen</label>
-                            <input type="text" placeholder="Ej. Provincial" class="w-full px-4 py-3 bg-white border border-[#ede5e2] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#b86553] transition">
+                            <input type="text" placeholder="Ej. Provincial" class="w-full px-4 py-3 bg-white border border-[#E2E8F0] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#0077B6] transition">
                         </div>
                         <div>
                             <label class="block text-[10px] uppercase font-bold tracking-wider text-neutral-500 mb-1">Número de Referencia</label>
-                            <input type="text" placeholder="Últimos 6 dígitos" class="w-full px-4 py-3 bg-white border border-[#ede5e2] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#b86553] transition">
+                            <input type="text" placeholder="Últimos 6 dígitos" class="w-full px-4 py-3 bg-white border border-[#E2E8F0] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#0077B6] transition">
                         </div>
                         <div>
                             <label class="block text-[10px] uppercase font-bold tracking-wider text-neutral-500 mb-1">Fecha de Transferencia</label>
-                            <input type="date" class="w-full px-4 py-3 bg-white border border-[#ede5e2] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#b86553] transition">
+                            <input type="date" class="w-full px-4 py-3 bg-white border border-[#E2E8F0] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#0077B6] transition">
                         </div>
                     </form>
 
                     <!-- Formulario Pago Móvil -->
                     <form id="form-pagomovil" class="space-y-4 hidden">
-                        <div class="bg-neutral-50 p-4 rounded text-sm text-neutral-600 mb-6 border border-[#ede5e2]">
+                        <div class="bg-neutral-50 p-4 rounded text-sm text-neutral-600 mb-6 border border-[#E2E8F0]">
                             <p class="font-bold text-neutral-900 mb-1">Datos Pago Móvil:</p>
                             <p>Banco: Banesco (0134)</p>
                             <p>Teléfono: 0414-1234567</p>
@@ -446,7 +446,7 @@
                         
                         <div>
                             <label class="block text-[10px] uppercase font-bold tracking-wider text-neutral-500 mb-1">Banco de Origen</label>
-                            <select class="w-full px-4 py-3 bg-white border border-[#ede5e2] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#b86553] transition">
+                            <select class="w-full px-4 py-3 bg-white border border-[#E2E8F0] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#0077B6] transition">
                                 <option>Seleccione Banco</option>
                                 <option>Mercantil</option>
                                 <option>Banesco</option>
@@ -456,16 +456,16 @@
                         </div>
                         <div>
                             <label class="block text-[10px] uppercase font-bold tracking-wider text-neutral-500 mb-1">Teléfono Emisor</label>
-                            <input type="text" placeholder="04xx-xxxxxxx" class="w-full px-4 py-3 bg-white border border-[#ede5e2] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#b86553] transition">
+                            <input type="text" placeholder="04xx-xxxxxxx" class="w-full px-4 py-3 bg-white border border-[#E2E8F0] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#0077B6] transition">
                         </div>
                         <div>
                             <label class="block text-[10px] uppercase font-bold tracking-wider text-neutral-500 mb-1">Número de Referencia</label>
-                            <input type="text" placeholder="Referencia de pago móvil" class="w-full px-4 py-3 bg-white border border-[#ede5e2] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#b86553] transition">
+                            <input type="text" placeholder="Referencia de pago móvil" class="w-full px-4 py-3 bg-white border border-[#E2E8F0] rounded text-sm text-neutral-900 focus:outline-none focus:border-[#0077B6] transition">
                         </div>
                     </form>
 
                     <!-- Botón Enviar Modal -->
-                    <button type="button" class="w-full py-4 mt-6 bg-[#b86553] hover:bg-[#a55645] text-white text-xs font-bold uppercase tracking-widest rounded transition">
+                    <button type="button" class="w-full py-4 mt-6 bg-[#0077B6] hover:bg-[#005F92] text-white text-xs font-bold uppercase tracking-widest rounded transition">
                         Confirmar Pago
                     </button>
                 </div>
@@ -521,10 +521,10 @@
 
         <!-- ==================== BARRA DE NAVEGACIÓN INFERIOR PARA MÓVILES ==================== -->
         <!-- Oculta en pantallas medianas (md:hidden) -->
-        <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-[#fcf9f8]/95 backdrop-blur-md border-t border-[#ede5e2] px-3 py-2 flex items-center justify-around shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
+        <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-[#FFFFFF]/95 backdrop-blur-md border-t border-[#E2E8F0] px-3 py-2 flex items-center justify-around shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
             
             <!-- Pestaña 1: Especialista (Activo) -->
-            <a href="especialistas.html" class="flex flex-col items-center gap-1 text-[#b86553]">
+            <a href="especialistas.html" class="flex flex-col items-center gap-1 text-[#0077B6]">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>

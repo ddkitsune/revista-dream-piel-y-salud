@@ -1,36 +1,47 @@
-# Design System: Revista Dream Piel y Salud (Stitch Spec - Blue Eclipse Edition)
+# Design System: Revista Dream Piel y Salud (Official Palette Edition)
 
-Este documento contiene la especificación completa de tokens semánticos, tipografía, paleta cromática basada en el logotipo oficial (**dream** con media luna creciente en degradado azul zafiro/índigo nocturno), arquitectura de layout y componentes para Google Stitch y el código HTML/Tailwind local.
+Este documento contiene la especificación completa de tokens semánticos, tipografía, paleta cromática oficial, arquitectura de layout y componentes para Google Stitch y el código HTML/Tailwind.
 
 ---
 
 ## 1. Brand Core & Identidad del Logotipo
 
-- **Isotipo:** Media luna creciente envolvente con degradado de **Azul Zafiro / Acero Clínico (`#456b8d`)** a **Azul Noche Profundo / Eclipse Índigo (`#152538`)**.
-- **Logotipo:** Tipografía sans-serif geométrica minimalista moderna con kerning equilibrado en azul marino oscuro (`#111c2a`).
+- **Isotipo (Arco / Media Luna Creciente):** Arco con degradado de **Azul Eléctrico a Cian (`#00B4D8` a `#0077B6`)**. Tono brillante del arco y los reflejos, aportando contraste dinámico, tecnológico y transmitiendo frescura, hidratación acuosa y luz láser en tratamientos dermatológicos.
+- **Logotipo ("dream"):** Tipografía sans-serif geométrica minimalista moderna con kerning equilibrado.
+  - En fondos oscuros o tarjetas premium: **Blanco Puro (`#FFFFFF`)**.
+  - En fondos claros editoriales: **Azul Marino Profundo / Negro Azulado (`#0B1325`)**.
 - **Personalidad:** Innovación dermatológica, rigor clínico de alta gama, biotecnología celular, elegancia cosmecéutica y serenidad médica.
-- **Enfoque Visual:** Fondo puro/clínico iluminado (`#f8fafd` / `#ffffff`), contenedores con leve tinte perla azulado (`#f0f4f8`), acentos interactivos en azul zafiro brillante (`#1e4b75` / `#2563eb`) y degradados eclipsados.
+- **Enfoque Visual:** Fondo puro y limpio (`#FFFFFF`), contenedores clínicos suaves (`#F8FAFC`), bordes de alta definición (`#E2E8F0`), y acentos interactivos en degradado cian-azul eléctrico (`#00B4D8` - `#0077B6`).
 
 ---
 
-## 2. Paleta de Colores (Tokens Semánticos Actualizados)
+## 2. Paleta de Colores (Tokens Semánticos Oficiales)
 
-| Token | Hex | Rol / Uso en Stitch y Web |
+| Token | Hex | Rol / Uso en la Plataforma |
 |---|---|---|
-| `color.brand.accent` | `#1e4b75` | Acento principal (Azul Eclipse / Zafiro Clínico), botones primarios, badges de sección |
-| `color.brand.accentLight` | `#356d9c` | Azul celeste clínico para estados activos, links destacados y degradados |
-| `color.brand.accentHover` | `#143553` | Hover states, botones activos |
-| `color.brand.dark` | `#111c2a` | Texto principal, titulares, elementos de alto contraste (Color tipografía del logo) |
-| `color.brand.surface` | `#f8fafd` | Background global (Blanco Hielo / Alabastro Clínico Suave) |
-| `color.brand.surfaceLow` | `#ffffff` | Contenedores primarios, cards elevadas, fondos de sección |
-| `color.brand.surfaceTint` | `#edf3f8` | Fondos secundarios, badges sutiles, hover de items |
-| `color.brand.surfaceHigh` | `#dbe5ee` | Bordes sutiles, divisores, líneas de tabla y separadores |
-| `color.text.muted` | `#586c82` | Subtítulos, metadatos, fechas de publicación, autoría |
-| `color.status.success` | `#1f8a65` | Estado de verificación médica, disponibilidad de citas |
+| `color.brand.cyan` | `#00B4D8` | Cian brillante para el arco, reflejos, badges luminosos, ondas de audio, acentos láser |
+| `color.brand.accent` | `#0077B6` | Azul eléctrico tecnológico, botones de acción primaria, badges activos, enlaces clave |
+| `color.brand.accentHover` | `#005F92` | Hover states interactivos para botones y enlaces |
+| `color.brand.dark` | `#0B1325` | Azul marino profundo / negro azulado. Color dominante en tarjetas de podcast, sustituto de negro plano en textos largos, fondos de portada y secciones nocturnas/premium con legibilidad impecable |
+| `color.brand.surface` | `#FFFFFF` | Blanco puro. Espacio negativo, limpieza visual y cajas de texto de la revista |
+| `color.brand.surfaceLow` | `#FFFFFF` | Contenedores primarios, cards elevadas, fondos de sección |
+| `color.brand.surfaceSubtle` | `#F8FAFC` | Fondos secundarios suaves, cards de contraste leve |
+| `color.brand.surfaceTint` | `#EBF8FF` | Tintes cian/hielo sutiles para chips activos y badges secundarios |
+| `color.brand.surfaceHigh` | `#E2E8F0` | Bordes clínicos nítidos, divisores y líneas de separación |
+| `color.text.muted` | `#5A6B82` | Subtítulos, metadatos, fechas de publicación, autoría |
+| `color.status.success` | `#059669` | Estado de verificación médica, disponibilidad de citas |
 
-### Degradado Distintivo del Isotipo (Eclipse Gradient)
+### Degradados Distintivos
+
 ```css
-background: linear-gradient(135deg, #111c2a 0%, #1e4063 50%, #45739c 100%);
+/* Arco y Reflejos Tecnológicos (Cian / Azul Eléctrico) */
+background: linear-gradient(135deg, #00B4D8 0%, #0077B6 100%);
+
+/* Tarjetas Nocturnas / Secciones Premium (Azul Marino Profundo) */
+background: linear-gradient(135deg, #0B1325 0%, #101d36 100%);
+
+/* Eclipse Dual */
+background: linear-gradient(135deg, #0B1325 0%, #0077B6 50%, #00B4D8 100%);
 ```
 
 ---
@@ -52,7 +63,7 @@ background: linear-gradient(135deg, #111c2a 0%, #1e4063 50%, #45739c 100%);
   - `radius-md`: `10px` (inputs, botones)
   - `radius-lg`: `16px` (cards de artículos, visor interactivo y productos)
   - `radius-full`: `9999px` (pills, avatares, isotipo circular)
-- **Border Strokes:** `1px solid #dbe5ee` con acabado nítido y limpio.
+- **Border Strokes:** `1px solid #E2E8F0` con acabado nítido y limpio.
 - **Sombras:**
-  - Suave: `0 4px 20px -2px rgba(17, 28, 42, 0.05)`
-  - Flotante / Modales: `0 12px 32px -4px rgba(17, 28, 42, 0.12)`
+  - Suave: `0 4px 20px -2px rgba(11, 19, 37, 0.05)`
+  - Flotante / Modales: `0 12px 32px -4px rgba(11, 19, 37, 0.12)`
