@@ -6,10 +6,14 @@ Este documento contiene la especificación completa de tokens semánticos, tipog
 
 ## 1. Brand Core & Identidad del Logotipo
 
-- **Isotipo (Arco / Media Luna Creciente):** Arco con degradado de **Azul Eléctrico a Cian (`#00B4D8` a `#0077B6`)**. Tono brillante del arco y los reflejos, aportando contraste dinámico, tecnológico y transmitiendo frescura, hidratación acuosa y luz láser en tratamientos dermatológicos.
-- **Logotipo ("dream"):** Tipografía sans-serif geométrica minimalista moderna con kerning equilibrado.
-  - En fondos oscuros o tarjetas premium: **Blanco Puro (`#FFFFFF`)**.
-  - En fondos claros editoriales: **Azul Marino Profundo / Negro Azulado (`#0B1325`)**.
+- **Isotipo Oficial (Letra `d` con Media Luna Creciente envolvente):**
+  - Arco exterior envolvente con degradado de **Azul Eléctrico a Cian (`#00B4D8` a `#0077B6`)**. Tono brillante del arco y reflejos, aportando contraste dinámico, tecnológico y transmitiendo frescura, hidratación acuosa y luz láser en tratamientos dermatológicos.
+  - Centro: Glifo estilizado de la letra **`d`**.
+- **Variantes de Logotipo Disponibles:**
+  - `assets/img/logo.png`: Logotipo oficial con fondo transparente, letra `d` en Azul Marino Profundo (`#0B1325`) y arco en degradado cian-azul para cabeceras y tarjetas sobre fondo blanco o claro.
+  - `assets/img/logo-white.png`: Logotipo oficial con fondo transparente, letra `d` en Blanco Puro (`#FFFFFF`) y arco en degradado cian-azul para cabeceras y tarjetas sobre fondo oscuro / noche (`#0B1325`).
+  - `assets/img/logo-original.jpg`: Copia original master en alta resolución.
+  - `assets/img/favicon-32.png`, `favicon-64.png`, `favicon-192.png`, `favicon.ico`: Favicons para pestañas y dispositivos móviles.
 - **Personalidad:** Innovación dermatológica, rigor clínico de alta gama, biotecnología celular, elegancia cosmecéutica y serenidad médica.
 - **Enfoque Visual:** Fondo puro y limpio (`#FFFFFF`), contenedores clínicos suaves (`#F8FAFC`), bordes de alta definición (`#E2E8F0`), y acentos interactivos en degradado cian-azul eléctrico (`#00B4D8` - `#0077B6`).
 
